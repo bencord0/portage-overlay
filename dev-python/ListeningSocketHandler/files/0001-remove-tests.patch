@@ -1,0 +1,11 @@
+--- setup.py    2015-02-27 09:24:23.768503301 +0000
++++ setup.py    2015-02-27 09:24:12.641939828 +0000
+@@ -17,7 +17,7 @@
+     version='0.1.0',
+     author='Ben Cordero',
+     author_email='bmc@linux.com',
+-    packages=['ListeningSocketHandler', 'tests'],
++    packages=['ListeningSocketHandler'],
+     url='https://github.com/bencord0/ListeningSocketHandler',
+     license='LICENSE.txt',
+     description='The opposite of logging.handlers.SocketHandler',
