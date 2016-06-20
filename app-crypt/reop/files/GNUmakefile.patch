@@ -1,0 +1,23 @@
+--- GNUmakefile.orig	2016-06-20 10:34:37.434596188 +0100
++++ GNUmakefile	2016-06-20 10:34:56.215440824 +0100
+@@ -8,9 +8,9 @@
+ 
+ OBJS= reop.o other/other.o
+ 
+-PREFIX= /usr/local
+-BINDIR= ${PREFIX}/bin
+-MANDIR= ${PREFIX}/share/man
++PREFIX= /usr
++BINDIR= ${DESTDIR}${PREFIX}/bin
++MANDIR= ${DESTDIR}${PREFIX}/share/man
+ 
+ .PHONY: all clean install
+ 
+@@ -23,5 +23,5 @@
+ 	rm -f ${OBJS} reop
+ 
+ install:
+-	install -m 755 reop ${BINDIR}
+-	install -m 644 reop.1 ${MANDIR}/man1
++	install -D -m 755 reop ${BINDIR}/reop
++	install -D -m 644 reop.1 ${MANDIR}/man1
