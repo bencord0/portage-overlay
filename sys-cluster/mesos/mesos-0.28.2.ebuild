@@ -14,7 +14,6 @@ KEYWORDS="~amd64"
 IUSE="python java"
 
 DEPEND="
-	sys-cluster/zookeeper
 	dev-cpp/glog
 	dev-cpp/gmock
 	java? (
@@ -22,8 +21,10 @@ DEPEND="
 		virtual/jdk
 	)
 	dev-libs/apr
+	dev-libs/cyrus-sasl
 	dev-libs/leveldb
 	dev-libs/protobuf
+	dev-libs/zookeeper-c
 	dev-vcs/subversion
 "
 RDEPEND="${DEPEND}"
