@@ -40,7 +40,6 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	dodir /etc/mesos
-	touch /etc/mesos/environment
 
 	insinto /usr/lib/systemd/system
 	doins "${FILESDIR}/mesos-master.service"
