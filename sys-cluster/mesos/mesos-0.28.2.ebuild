@@ -35,3 +35,17 @@ src_configure() {
 		$(use_enable java) \
 		--with-zookeeper=/usr
 }
+
+src_install() {
+	emake DESTDIR="${D}" install
+
+	dodir /etc/mesos
+	touch /etc/mesos/environment
+
+	insinto /usr/lib/systemd/system
+	doins "${FILESDIR}/mesos-master.service"
+	doins "${FILESDIR}/mesos-slave.service"
+
+	keepdir /var/lib/mesos
+	keepdir /var/log/mesos
+}
