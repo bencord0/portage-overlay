@@ -8,7 +8,7 @@ DESCRIPTION="Datacenter Cluster Operating System"
 HOMEPAGE="http://mesos.apache.org/"
 SRC_URI="http://archive.apache.org/dist/mesos/${PV}/${P}.tar.gz"
 
-LICENSE=""
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="python java"

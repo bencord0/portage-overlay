@@ -10,7 +10,7 @@ DESCRIPTION="Highly reliable distributed coordination."
 HOMEPAGE="http://zookeeper.apache.org/"
 SRC_URI="http://archive.apache.org/dist/zookeeper/${PV}/${P}.tar.gz"
 
-LICENSE="APACHE"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
