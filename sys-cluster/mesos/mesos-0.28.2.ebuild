@@ -33,6 +33,16 @@ src_configure() {
 	econf \
 		$(use_enable python) \
 		$(use_enable java) \
+		--with-apr=/usr \
+		--with-curl=/usr \
+		--with-glog=/usr \
+		--with-gmock=/usr \
+		--with-leveldb=/usr \
+		--with-nl=/usr \
+		--with-protobuf=/usr \
+		--with-sasl=/usr \
+		--with-svn=/usr \
+		--with-zlib=/usr \
 		--with-zookeeper=/usr
 }
 
@@ -40,7 +50,6 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	dodir /etc/mesos
-	touch /etc/mesos/environment
 
 	insinto /usr/lib/systemd/system
 	doins "${FILESDIR}/mesos-master.service"
