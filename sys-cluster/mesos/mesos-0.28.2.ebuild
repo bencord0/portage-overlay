@@ -15,7 +15,6 @@ IUSE="python java"
 
 DEPEND="
 	dev-cpp/glog
-	dev-cpp/gmock
 	java? (
 		dev-java/maven-bin
 		virtual/jdk
@@ -36,7 +35,6 @@ src_configure() {
 		--with-apr=/usr \
 		--with-curl=/usr \
 		--with-glog=/usr \
-		--with-gmock=/usr \
 		--with-leveldb=/usr \
 		--with-nl=/usr \
 		--with-protobuf=/usr \
