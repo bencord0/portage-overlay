@@ -21,8 +21,10 @@ RDEPEND="
 src_install() {
 	dodir /usr/share/marathon/lib
 	insinto /usr/share/marathon/lib
+	newins target/*/marathon-assembly-*.jar marathon-assembly.jar
 
-	for i in target/*/*.jar; do
-		doins "$i"
-	done
+	insinto /usr/lib/systemd/system
+	doins "${FILESDIR}/marathon.service"
+
+	keepdir /etc/marathon
 }
