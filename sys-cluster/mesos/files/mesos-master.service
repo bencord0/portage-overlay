@@ -1,0 +1,9 @@
+[Unit]
+Description=Mesos Master
+
+[Service]
+EnvironmentFile=-/etc/mesos/environment
+ExecStart=/usr/sbin/mesos-master
+
+[Install]
+WantedBy=multi-user.target

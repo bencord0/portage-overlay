@@ -1,0 +1,9 @@
+[Unit]
+Description=Mesos Slave
+
+[Service]
+EnvironmentFile=-/etc/mesos/environment
+ExecStart=/usr/sbin/mesos-slave
+
+[Install]
+WantedBy=multi-user.target
