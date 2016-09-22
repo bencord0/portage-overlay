@@ -1,0 +1,16 @@
+bencord0's portage overlay
+==========================
+
+Drop in a gentoo repos.conf file
+
+  $ sudo tee /etc/portage/repos.conf/bencord0.conf << EOF
+  [bencord0]
+  location = /usr/local/portage
+  sync-type = git
+  sync-uri = https://github.com/bencord0/portage-overlay
+  auto-sync = yes
+  EOF
+
+Sync the overlay
+
+  $ sudo emaint sync -r bencord0
