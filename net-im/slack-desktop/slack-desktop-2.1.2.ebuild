@@ -16,8 +16,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="
 	gnome-base/gconf
-	gnome-base/libgnome-keyring
-	sys-apps/lsb-release
 "
 
 src_unpack() {
