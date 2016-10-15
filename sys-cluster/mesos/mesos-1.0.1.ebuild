@@ -4,6 +4,8 @@
 
 EAPI=6
 
+inherit user
+
 DESCRIPTION="Datacenter Cluster Operating System"
 HOMEPAGE="http://mesos.apache.org/"
 SRC_URI="http://archive.apache.org/dist/mesos/${PV}/${P}.tar.gz"
@@ -28,6 +30,11 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+pkg_setup() {
+	enewgroup mesos
+	enewuser mesos -1 /bin/sh /var/lib/mesos mesos
+}
+
 src_configure() {
 
 	econf \
@@ -50,11 +57,20 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	dodir /etc/mesos
+	insinto /etc/mesos
+	doins "${FILESDIR}/environment"
 
 	insinto /usr/lib/systemd/system
 	doins "${FILESDIR}/mesos-master.service"
-	doins "${FILESDIR}/mesos-slave.service"
+	doins "${FILESDIR}/mesos-agent.service"
 
 	keepdir /var/lib/mesos
 	keepdir /var/log/mesos
+
+	insinto /usr/share/mesos/lib
+	for jar in src/java/target/*.jar
+	do
+		echo "Adding: $jar"
+		doins $jar
+	done
 }

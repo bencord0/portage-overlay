@@ -4,6 +4,8 @@
 
 EAPI=6
 
+inherit user
+
 DESCRIPTION="A container orchestration platform for Mesos"
 HOMEPAGE="https://mesosphere.github.io/marathon"
 SRC_URI="http://downloads.mesosphere.com/${PN}/v${PV}/${P}.tgz"
@@ -18,6 +20,11 @@ RDEPEND="
 	virtual/jre
 "
 
+pkg_setup() {
+	enewgroup marathon
+	enewuser marathon -1 /bin/sh /var/lib/marathon marathon
+}
+
 src_install() {
 	dodir /usr/share/marathon/lib
 	insinto /usr/share/marathon/lib
@@ -26,5 +33,6 @@ src_install() {
 	insinto /usr/lib/systemd/system
 	doins "${FILESDIR}/marathon.service"
 
-	keepdir /etc/marathon
+	insinto /etc/marathon
+	doins "${FILESDIR}/environment"
 }
