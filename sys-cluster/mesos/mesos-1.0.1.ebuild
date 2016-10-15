@@ -11,7 +11,7 @@ SRC_URI="http://archive.apache.org/dist/mesos/${PV}/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="python java"
+IUSE="python +java"
 
 DEPEND="
 	dev-cpp/glog
@@ -22,13 +22,14 @@ DEPEND="
 	dev-libs/apr
 	dev-libs/cyrus-sasl
 	dev-libs/leveldb
-	dev-libs/protobuf
+	dev-libs/protobuf[java]
 	dev-libs/zookeeper-c
 	dev-vcs/subversion
 "
 RDEPEND="${DEPEND}"
 
 src_configure() {
+
 	econf \
 		$(use_enable python) \
 		$(use_enable java) \
@@ -41,7 +42,8 @@ src_configure() {
 		--with-sasl=/usr \
 		--with-svn=/usr \
 		--with-zlib=/usr \
-		--with-zookeeper=/usr
+		--with-zookeeper=/usr \
+		PROTOBUF_JAR=/usr/share/protobuf/lib/protobuf.jar
 }
 
 src_install() {
