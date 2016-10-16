@@ -82,4 +82,7 @@ src_install() {
 		grep site-packages | \
 		grep -v site-packages/mesos | \
 		xargs rm -f
+	
+	rm -f "${D}/usr/bin/easy_install"
+	rm -rf "${D}/usr/lib64/python2.7/site-packages/setuptools"
 }
