@@ -4,8 +4,8 @@ Description=Mesos Agent
 [Service]
 EnvironmentFile=-/etc/mesos/environment
 ExecStart=/usr/sbin/mesos-agent
-User=mesos
-Group=mesos
+User=root
+Group=root
 
 [Install]
 WantedBy=multi-user.target

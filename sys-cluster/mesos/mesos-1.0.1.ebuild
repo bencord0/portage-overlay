@@ -21,6 +21,9 @@ DEPEND="
 		dev-java/maven-bin
 		virtual/jdk
 	)
+	python? (
+		dev-libs/protobuf[python]
+	)
 	dev-libs/apr
 	dev-libs/cyrus-sasl
 	dev-libs/leveldb
@@ -73,4 +76,10 @@ src_install() {
 		echo "Adding: $jar"
 		doins $jar
 	done
+
+	# Remove non-mesos python modules
+	find "${D}" | \
+		grep site-packages | \
+		grep -v site-packages/mesos | \
+		xargs rm -f
 }
