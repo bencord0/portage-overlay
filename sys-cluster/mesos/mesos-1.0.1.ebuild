@@ -41,6 +41,7 @@ pkg_setup() {
 src_configure() {
 
 	econf \
+		--with-network-isolator \
 		$(use_enable python) \
 		$(use_enable java) \
 		--with-apr=/usr \
@@ -82,7 +83,7 @@ src_install() {
 		grep site-packages | \
 		grep -v site-packages/mesos | \
 		xargs rm -f
-	
+
 	rm -f "${D}/usr/bin/easy_install"
 	rm -rf "${D}/usr/lib64/python2.7/site-packages/setuptools"
 }
