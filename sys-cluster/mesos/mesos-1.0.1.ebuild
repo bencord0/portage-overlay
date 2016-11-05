@@ -30,6 +30,7 @@ DEPEND="
 	dev-libs/protobuf[java]
 	dev-libs/zookeeper-c
 	dev-vcs/subversion
+	sys-apps/ethtool
 "
 RDEPEND="${DEPEND}"
 
@@ -63,6 +64,9 @@ src_install() {
 	dodir /etc/mesos
 	insinto /etc/mesos
 	doins "${FILESDIR}/environment"
+
+	insinto /etc/sysctl.d
+	newins "${FILESDIR}/mesos.sysctl" "20-mesos.conf"
 
 	insinto /usr/lib/systemd/system
 	doins "${FILESDIR}/mesos-master.service"
