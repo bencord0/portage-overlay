@@ -15,8 +15,3 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-
-src_configure() {
-	# https://github.com/projectatomic/bubblewrap/issues/112
-	econf --disable-man
-}
