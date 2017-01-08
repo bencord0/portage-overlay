@@ -14,4 +14,4 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-cluster/glusterfs"
-RDEPEND=""
+RDEPEND="sys-cluster/glusterfs"
