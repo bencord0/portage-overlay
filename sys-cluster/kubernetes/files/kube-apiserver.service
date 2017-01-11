@@ -1,0 +1,6 @@
+[Service]
+Environmentfile=/etc/kubernetes/environment
+ExecStart=/usr/bin/kube-apiserver --etcd-servers=${ETCD_SERVERS} --service-cluster-ip-range=${SERVICE_CLUSTER_IP_RANGE}
+
+[Install]
+WantedBy=default.target

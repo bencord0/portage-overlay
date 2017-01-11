@@ -14,14 +14,25 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="net-misc/myip"
 
 S="${WORKDIR}/${PN}"
 
 src_install() {
 	local KUBE_BINARIES=$(find server/ -executable -type f)
+	local KUBE_SERVICES=$(find "${FILESDIR}/" -name 'kube*.service' -type f)
 
 	for binary in $KUBE_BINARIES; do
 		dobin $binary
+	done
+
+	dodir /etc/kubernetes
+	insinto /etc/kubernetes
+	doins "${FILESDIR}/environment"
+	keepdir /etc/kubernetes/manifests
+
+	insinto /usr/lib/systemd/system
+	for service in $KUBE_SERVICES; do
+		doins $service
 	done
 }

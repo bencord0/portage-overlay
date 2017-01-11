@@ -1,0 +1,10 @@
+[Service]
+After=myip.service
+Wants=myip.service
+EnvironmentFile=/etc/myip
+EnvironmentFile=/etc/kubernetes/environment
+ExecStartPre=/bin/mkdir -p /etc/kubernetes/manifests
+ExecStart=/usr/bin/kubelet --pod-manifest-path=/etc/kubernetes/manifests --api-servers=${KUBERNETES_MASTER} --node-ip=${MYIP}
+
+[Install]
+WantedBy=default.target
