@@ -1,6 +1,8 @@
-[Service]
+[Unit]
 After=myip.service
 Wants=myip.service
+
+[Service]
 EnvironmentFile=/etc/myip
 EnvironmentFile=/etc/kubernetes/environment
 ExecStartPre=/bin/mkdir -p /etc/kubernetes/manifests
