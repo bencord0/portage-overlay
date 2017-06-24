@@ -1,6 +1,7 @@
 [Service]
 EnvironmentFile=/etc/kubernetes/environment
 ExecStart=/usr/bin/kube-scheduler --master=${KUBERNETES_MASTER}
+Restart=on-failure
 
 [Install]
 WantedBy=default.target

@@ -1,6 +1,7 @@
 [Service]
 EnvironmentFile=/etc/kubernetes/environment
 ExecStart=/usr/bin/kube-proxy --master=${KUBERNETES_MASTER} --cluster-cidr=${SERVICE_CLUSTER_IP_RANGE}
+Restart=on-failure
 
 [Install]
 WantedBy=default.target
