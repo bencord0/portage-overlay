@@ -1,0 +1,24 @@
+diff --git a/cmd/kube-dns/app/server.go b/cmd/kube-dns/app/server.go
+index 974f0d9..fd047f2 100644
+--- a/cmd/kube-dns/app/server.go
++++ b/cmd/kube-dns/app/server.go
+@@ -20,7 +20,6 @@ import (
+ 	"fmt"
+ 	"net"
+ 	"net/http"
+-	"net/http/pprof"
+ 	"os"
+ 	"os/signal"
+ 	"regexp"
+@@ -143,11 +142,6 @@ func (server *KubeDNSServer) setupHandlers() {
+ 		}
+ 	})
+ 
+-	glog.V(0).Infof("Setting up pprof handler (/debug/pprof)")
+-	http.HandleFunc("/debug/pprof/", pprof.Index)
+-	http.HandleFunc("/debug/pprof/profile", pprof.Profile)
+-	http.HandleFunc("/debug/pprof/symbol", pprof.Symbol)
+-	http.HandleFunc("/debug/pprof/trace", pprof.Trace)
+ }
+ 
+ // setupSignalHandlers installs signal handler to ignore SIGINT and
