@@ -21,6 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
+	app-arch/zstd
 	>=dev-util/meson-0.41.0
 	dev-util/ninja
 	sys-fs/fuse
