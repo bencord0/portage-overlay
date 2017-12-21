@@ -18,14 +18,25 @@ fi
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="fuse man selinux"
 
 DEPEND="
 	app-arch/zstd
 	>=dev-util/meson-0.41.0
 	dev-util/ninja
-	sys-fs/fuse
+	fuse? ( sys-fs/fuse )
+	man? ( dev-python/sphinx )
+	selinux? ( sys-libs/libselinux )
 "
 RDEPEND="
-	sys-fs/fuse
+	fuse? ( sys-fs/fuse )
 "
+
+src_configure() {
+	local emesonargs=(
+		-Dfuse=$(usex fuse true false)
+		-Dman=$(usex man true false)
+		-Dselinux=$(usex selinux true false)
+	)
+	meson_src_configure
+}
