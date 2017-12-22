@@ -20,16 +20,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fuse man selinux"
 
-DEPEND="
+RDEPEND="
+	app-arch/xz-utils
 	app-arch/zstd
-	>=dev-util/meson-0.41.0
+	dev-libs/openssl
+	sys-apps/acl
 	dev-util/ninja
+	sys-apps/attr
+	sys-libs/zlib
 	fuse? ( sys-fs/fuse )
-	man? ( dev-python/sphinx )
 	selinux? ( sys-libs/libselinux )
 "
-RDEPEND="
-	fuse? ( sys-fs/fuse )
+DEPEND="${RDEPEND}
+	>=dev-util/meson-0.41.0
+	man? ( dev-python/sphinx )
 "
 
 src_configure() {
