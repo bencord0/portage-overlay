@@ -33,6 +33,7 @@ src_install() {
 	dodir /etc/kubernetes
 	insinto /etc/kubernetes
 	doins "${FILESDIR}/environment"
+	doins "${FILESDIR}/kubeconfig"
 	keepdir /etc/kubernetes/manifests
 
 	insinto /usr/lib/systemd/system

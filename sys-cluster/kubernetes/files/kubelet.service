@@ -6,7 +6,7 @@ Wants=myip.service
 EnvironmentFile=/etc/myip
 EnvironmentFile=/etc/kubernetes/environment
 ExecStartPre=/bin/mkdir -p /etc/kubernetes/manifests
-ExecStart=/usr/bin/kubelet --pod-manifest-path=/etc/kubernetes/manifests --api-servers=${KUBERNETES_MASTER} --node-ip=${MYIP}
+ExecStart=/usr/bin/kubelet --pod-manifest-path=/etc/kubernetes/manifests --kubeconfig=/etc/kubernetes/kubeconfig --node-ip=${MYIP} --fail-swap-on=false
 Restart=on-failure
 
 [Install]
