@@ -18,4 +18,5 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}
 	dev-python/ecdsa
+	dev-python/pycrypto
 "
