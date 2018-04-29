@@ -1,0 +1,57 @@
+diff --git a/CMakeLists.txt.orig b/CMakeLists.txt
+index 3198f25..9fe167a 100644
+--- a/CMakeLists.txt.orig
++++ b/CMakeLists.txt
+@@ -126,8 +126,8 @@ if (BUILD_SHARED_LIBS)
+   set_target_properties(opentracing PROPERTIES VERSION ${OPENTRACING_VERSION_STRING}
+                                              SOVERSION ${OPENTRACING_VERSION_MAJOR})
+   install(TARGETS opentracing EXPORT OpenTracingTargets
+-          LIBRARY DESTINATION lib
+-          ARCHIVE DESTINATION lib)
++	  LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
++	  ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}")
+   if (CLANG_TIDY_EXE)
+     set_target_properties(opentracing PROPERTIES
+                                     CXX_CLANG_TIDY "${DO_CLANG_TIDY}")
+@@ -140,7 +140,7 @@ if (BUILD_STATIC_LIBS)
+   set_target_properties(opentracing-static PROPERTIES OUTPUT_NAME opentracing)
+   target_include_directories(opentracing-static INTERFACE "$<INSTALL_INTERFACE:include/>")
+   install(TARGETS opentracing-static EXPORT OpenTracingTargets
+-          ARCHIVE DESTINATION lib)
++	  ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}")
+ endif()
+ 
+ 
+@@ -171,7 +171,7 @@ export(EXPORT OpenTracingTargets
+ configure_file(cmake/OpenTracingConfig.cmake
+     "${CMAKE_CURRENT_BINARY_DIR}/OpenTracingConfig.cmake"
+     COPYONLY)
+-set(ConfigPackageLocation lib/cmake/OpenTracing)
++set(ConfigPackageLocation "${CMAKE_INSTALL_LIBDIR}/cmake/OpenTracing")
+ install(EXPORT OpenTracingTargets
+     FILE OpenTracingTargets.cmake
+     NAMESPACE OpenTracing::
+diff --git a/mocktracer/CMakeLists.txt.orig b/mocktracer/CMakeLists.txt
+index 2f3d0a6..79be2af 100644
+--- a/mocktracer/CMakeLists.txt.orig
++++ b/mocktracer/CMakeLists.txt
+@@ -17,8 +17,8 @@ if (BUILD_SHARED_LIBS)
+                                                SOVERSION ${OPENTRACING_VERSION_MAJOR})
+   target_link_libraries(opentracing_mocktracer opentracing)
+   install(TARGETS opentracing_mocktracer EXPORT OpenTracingTargets
+-          LIBRARY DESTINATION lib
+-          ARCHIVE DESTINATION lib)
++	  LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
++	  ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}")
+ endif()
+ 
+ if (BUILD_STATIC_LIBS)
+@@ -27,7 +27,7 @@ if (BUILD_STATIC_LIBS)
+   target_include_directories(opentracing_mocktracer-static INTERFACE "$<INSTALL_INTERFACE:include/>")
+   target_link_libraries(opentracing_mocktracer-static opentracing-static)
+   install(TARGETS opentracing_mocktracer-static EXPORT OpenTracingTargets
+-          ARCHIVE DESTINATION lib)
++	  ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}")
+ endif()
+ 
+ install(DIRECTORY include/opentracing DESTINATION include
