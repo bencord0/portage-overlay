@@ -16,7 +16,7 @@ fi
 
 inherit distutils-r1
 
-DESCRIPTION="Nginx plugin for certbot (Let's Encrypt Client)"
+DESCRIPTION="DNS01 rfc2136 plugin for certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
 
 LICENSE="Apache-2.0"
