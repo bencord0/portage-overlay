@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="
-	dev-python/dnspython
-	dev-python/prometheus_client
-	dev-python/pyyaml
+DEPEND=""
+RDEPEND="
+	dev-python/dnspython[${PYTHON_USEDEP}]
+	dev-python/prometheus_client[${PYTHON_USEDEP}]
+	dev-python/pyyaml[${PYTHON_USEDEP}]
 "
-RDEPEND="${DEPEND}"
 BDEPEND=""
