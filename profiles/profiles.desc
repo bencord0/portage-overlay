@@ -1,0 +1,4 @@
+# layout:
+# arch          profile_directory           status
+
+amd64           default/linux/amd64/nspawn  stable
