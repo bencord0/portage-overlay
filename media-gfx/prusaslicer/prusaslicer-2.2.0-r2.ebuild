@@ -35,7 +35,7 @@ RDEPEND="
 	sci-libs/libigl
 	sci-libs/nlopt
 	sys-libs/zlib
-	x11-libs/wxGTK:${WX_GTK_VER}[X]
+	x11-libs/wxGTK:3.0[X]
 	"
 DEPEND="${RDEPEND}"
 
