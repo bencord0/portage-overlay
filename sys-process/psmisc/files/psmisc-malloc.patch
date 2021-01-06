@@ -1,0 +1,12 @@
+--- a/configure.ac	2021-01-06 00:20:05.927791618 +0000
++++ b/configure.ac	2021-01-06 00:20:18.000051777 +0000
+@@ -180,9 +180,7 @@
+ AC_PROG_GCC_TRADITIONAL
+ AC_FUNC_LSTAT
+ AC_FUNC_LSTAT_FOLLOWS_SLASHED_SYMLINK
+-AC_FUNC_MALLOC
+ AC_FUNC_MEMCMP
+-AC_FUNC_REALLOC
+ AC_FUNC_STAT
+ AC_CHECK_FUNCS([atexit getmntent memset nl_langinfo rawmemchr regcomp rpmatch setlocale socket strcasecmp strchr strdup strerror strpbrk strrchr strtoul])
+ 
