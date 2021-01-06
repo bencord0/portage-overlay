@@ -1,0 +1,5 @@
+EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --usepkg --getbinpkg --binpkg-respect-use --binpkg-changed-deps"
+FEATURES="${FEATURES} buildpkg binpkg-multi-instance"
+
+GENTOO_MIRRORS="https://portage.condi.me/ http://distfiles.gentoo.org/"
+PORTAGE_BINHOST="https://portage.condi.me/${CHOST}/packages/"
