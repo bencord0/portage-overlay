@@ -1,0 +1,5 @@
+*app-editors/vim
+
+-*sys-apps/busybox
+-*sys-fs/e2fsprogs
+-*virtual/ssh
