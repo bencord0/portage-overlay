@@ -1,1 +1,2 @@
+ACCEPT_LICENSE="${ACCEPT_LICENSE} MPEG-4"
 USE="${USE} pulseaudio wayland -libglvnd"
