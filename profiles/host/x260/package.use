@@ -1,3 +1,4 @@
+media-libs/libsdl2 gles2
 net-wireless/bluez user-session deprecated experimental extra-tools
 sys-apps/dbus user-session
 sys-devel/gcc go
