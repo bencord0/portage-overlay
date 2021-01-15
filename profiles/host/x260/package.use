@@ -3,3 +3,4 @@ net-wireless/bluez user-session deprecated experimental extra-tools
 sys-apps/dbus user-session
 sys-apps/xdg-desktop-portal screencast
 sys-devel/gcc go
+sys-libs/zlib static-libs
