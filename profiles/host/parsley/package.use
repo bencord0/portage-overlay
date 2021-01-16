@@ -1,0 +1,1 @@
+www-servers/nginx NGINX_MODULES_HTTP: access addition auth_basic auth_pam fancyindex fastcgi gzip map proxy realip rewrite spdy uwsgi set_misc upstream_keepalive upstream_check
