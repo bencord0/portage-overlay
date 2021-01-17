@@ -1,2 +1,3 @@
 net-dns/bind -berkdb urandom caps
+net-proxy/haproxy tools vim-syntax
 sys-libs/libseccomp static-libs
