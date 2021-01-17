@@ -1,6 +1,7 @@
 app-crypt/mit-krb5 openldap
 dev-libs/cyrus-sasl kerberos openldap urandom
 net-dns/bind -berkdb urandom caps
+net-libs/gnutls tools
 net-nds/openldap kerberos -samba sasl
 net-proxy/haproxy tools vim-syntax
 sys-libs/libseccomp static-libs
