@@ -1,4 +1,5 @@
 ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE @FREE"
+GRUB_PLATFORMS="-* pc"
 LLVM_TARGETS="BPF X86"
 NGINX_MODULES_HTTP="access addition auth_basic auth_pam fancyindex fastcgi gzip map proxy realip rewrite uwsgi set_misc upstream_keepalive upstream_check"
 USE="${USE} xattr"
