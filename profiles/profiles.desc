@@ -7,3 +7,4 @@ arm             default/linux/arm/armv7a/nspawn dev
 
 amd64           host/parsley                    stable
 amd64           host/x260                       stable
+amd64           host/x395                       stable
