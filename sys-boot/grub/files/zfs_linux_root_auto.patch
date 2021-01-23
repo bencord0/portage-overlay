@@ -1,0 +1,15 @@
+diff --git a/util/grub.d/10_linux.in b/util/grub.d/10_linux.in
+index e8b01c0d0..0d9b72da3 100644
+--- a/util/grub.d/10_linux.in
++++ b/util/grub.d/10_linux.in
+@@ -71,9 +71,7 @@ case x"$GRUB_FS" in
+ 	    GRUB_CMDLINE_LINUX="rootflags=subvol=${rootsubvol} ${GRUB_CMDLINE_LINUX}"
+ 	fi;;
+     xzfs)
+-	rpool=`${grub_probe} --device ${GRUB_DEVICE} --target=fs_label 2>/dev/null || true`
+-	bootfs="`make_system_path_relative_to_its_root / | sed -e "s,@$,,"`"
+-	LINUX_ROOT_DEVICE="ZFS=${rpool}${bootfs%/}"
++	LINUX_ROOT_DEVICE="zfs:AUTO"
+ 	;;
+ esac
+
