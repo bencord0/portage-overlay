@@ -1,1 +1,2 @@
 ACCEPT_LICENSE="${ACCEPT_LICENSE} google-chrome MPEG-4 NPSL"
+USE="${USE} bluetooth pulseaudio"
