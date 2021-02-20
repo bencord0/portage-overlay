@@ -10,6 +10,8 @@ DESCRIPTION="Python wrapper for the Cloudflare Client API v4"
 HOMEPAGE="https://github.com/cloudflare/python-cloudflare"
 SRC_URI="https://github.com/cloudflare/python-cloudflare/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
+DISTUTILS_USE_SETUPTOOLS=rdepend
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -17,3 +19,8 @@ KEYWORDS="~amd64 ~x86"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+PATCHES=(
+	"${FILESDIR}/uninstall-examples.patch"
+	"${FILESDIR}/remove-man-pages.patch"
+)
