@@ -2,3 +2,4 @@ dev-dotnet/dotnetcore-runtime-bin
 dev-dotnet/dotnetcore-sdk-bin
 dev-dotnet/dotnetcore-sdk-bin-common
 dev-java/gradle-bin
+media-video/obs-studio
