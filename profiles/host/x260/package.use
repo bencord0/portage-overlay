@@ -1,4 +1,4 @@
-dev-db/postgis POSTGRES_TARGETS: -* postgres9_6 postgres12
+dev-db/postgis postgres_targets_postgres9_6 postgres_targets_postgres12
 dev-db/postgresql static-libs
 kde-plasma/plasma-meta -crypt -legacy-systray
 media-libs/libsdl2 gles2
