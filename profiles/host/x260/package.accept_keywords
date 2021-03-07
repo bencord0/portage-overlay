@@ -2,4 +2,5 @@ dev-dotnet/dotnetcore-runtime-bin
 dev-dotnet/dotnetcore-sdk-bin
 dev-dotnet/dotnetcore-sdk-bin-common
 dev-java/gradle-bin
+dev-lang/python
 media-video/obs-studio
