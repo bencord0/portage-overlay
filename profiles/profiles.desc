@@ -5,6 +5,7 @@ amd64           default/linux/amd64/nspawn      stable
 arm             default/linux/arm/armv6j/nspawn dev
 arm             default/linux/arm/armv7a/nspawn dev
 
+amd64           host/blog                       stable
 amd64           host/juniper                    stable
 amd64           host/parsley                    stable
 amd64           host/x260                       stable
