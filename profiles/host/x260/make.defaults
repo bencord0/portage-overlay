@@ -1,2 +1,2 @@
 ACCEPT_LICENSE="${ACCEPT_LICENSE} google-chrome intel-ucode MPEG-4 NPSL"
-USE="${USE} pulseaudio wayland -libglvnd"
+USE="${USE} -libglvnd pulseaudio wayland -webengine"

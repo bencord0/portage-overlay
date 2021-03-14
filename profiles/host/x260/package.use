@@ -1,4 +1,3 @@
-*/* -webengine
 dev-db/postgis postgres_targets_postgres9_6 postgres_targets_postgres12
 dev-db/postgresql static-libs
 dev-libs/openssl static-libs
