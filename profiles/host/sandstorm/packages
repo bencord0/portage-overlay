@@ -1,0 +1,5 @@
+*dev-vcs/git
+*sys-auth/nss_ldap
+*sys-auth/pam_krb5
+*sys-auth/pam_ldap
+*www-servers/nginx
