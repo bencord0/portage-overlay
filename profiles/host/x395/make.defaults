@@ -1,0 +1,2 @@
+VIDEO_CARDS="amdgpu radeonsi"
+ABI_X86="32 64"
