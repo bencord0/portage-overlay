@@ -1,3 +1,4 @@
 gentoo:default/linux/amd64/17.1/desktop/plasma/systemd
 bencord0:base
 bencord0:base/multilib
+bencord0:base/zfs
