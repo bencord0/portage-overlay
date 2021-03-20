@@ -1,7 +1,7 @@
 app-admin/pass-otp qrcode
 app-editors/vim python
 net-wireless/bluez -cups
-sys-apps/systemd cgroup-hybrid curl gcrypt gnuefi importd lzma
+sys-apps/systemd cgroup-hybrid curl gcrypt gnuefi importd lzma nat
 sys-apps/dbus user-session
 sys-apps/util-linux python
 x11-libs/gtk+ -cups
