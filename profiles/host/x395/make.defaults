@@ -1,2 +1,3 @@
 VIDEO_CARDS="amdgpu radeonsi"
 ACCEPT_LICENSE="${ACCEPT_LICENSE} google-chrome intel-ucode MPEG-4 NPSL"
+USE="${USE} -webengine"
