@@ -1,2 +1,3 @@
 app-misc/radeontop
+dev-libs/libbpf
 dev-util/bcc
