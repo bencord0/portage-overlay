@@ -20,3 +20,7 @@ RDEPEND="
 	<dev-python/graphql-relay-3[${PYTHON_USEDEP}]
 	dev-python/aniso8601[${PYTHON_USEDEP}]
 "
+
+PATCHES=(
+	"${FILESDIR}/uncapped-aniso8601.patch"
+)

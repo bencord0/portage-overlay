@@ -25,3 +25,7 @@ RDEPEND="
 	dev-python/promise[${PYTHON_USEDEP}]
 	dev-python/text-unidecode[${PYTHON_USEDEP}]
 "
+
+PATCHES=(
+	"${FILESDIR}/install-requires-singledispatch.patch"
+)

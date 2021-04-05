@@ -9,6 +9,7 @@ dev-python/graphql-core
 dev-python/graphql-relay
 dev-python/httptools
 dev-python/promise
+dev-python/psycopg2cffi
 dev-python/pytest-runner
 dev-python/rx
 dev-python/uvicorn

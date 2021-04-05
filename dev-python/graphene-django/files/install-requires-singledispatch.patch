@@ -1,0 +1,12 @@
+diff --git a/setup.py b/setup.py
+index e6615b8..551c589 100644
+--- a/setup.py
++++ b/setup.py
+@@ -64,7 +64,6 @@ setup(
+         "graphene>=2.1.7,<3",
+         "graphql-core>=2.1.0,<3",
+         "Django>=1.11",
+-        "singledispatch>=3.4.0.3",
+         "promise>=2.1",
+         "text-unidecode",
+     ],
