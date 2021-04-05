@@ -1,0 +1,16 @@
+www-apps/blog **
+
+dev-python/django-debug-toolbar
+dev-python/django-jinja
+dev-python/djangorestframework
+dev-python/graphene
+dev-python/graphene-django
+dev-python/graphql-core
+dev-python/graphql-relay
+dev-python/httptools
+dev-python/promise
+dev-python/pytest-runner
+dev-python/rx
+dev-python/uvicorn
+dev-python/uvloop
+dev-python/whitenoise

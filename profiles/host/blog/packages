@@ -1,2 +1,3 @@
-*www-servers/nginx
 *dev-db/postgresql
+*www-apps/blog
+*www-servers/nginx
