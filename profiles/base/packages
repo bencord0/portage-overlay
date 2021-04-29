@@ -1,2 +1,4 @@
+*app-editors/vim
 *app-eselect/eselect-repository
 *app-portage/eix
+*dev-vcs/git

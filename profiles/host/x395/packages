@@ -1,7 +1,6 @@
 app-misc/radeontop
 dev-util/bcc
 dev-util/catalyst
-*dev-vcs/git
 kde-apps/kde-apps-meta
 kde-plasma/plasma-meta
 mail-client/thunderbird-bin
