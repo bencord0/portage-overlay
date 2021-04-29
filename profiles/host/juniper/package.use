@@ -1,2 +1,4 @@
+kde-apps/kde-apps-meta -education -games -graphics -multimedia -network
 media-libs/libsdl2 gles2
 sys-apps/dbus user-session
+sys-boot/grub libzfs

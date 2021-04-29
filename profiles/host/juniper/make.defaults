@@ -1,2 +1,2 @@
-ACCEPT_LICENSE="${ACCEPT_LICENSE} google-chrome MPEG-4 NPSL"
+ACCEPT_LICENSE="${ACCEPT_LICENSE} google-chrome linux-fw-redistributable MPEG-4 NPSL no-source-code NVIDIA-r2"
 USE="${USE} bluetooth pulseaudio wayland"
