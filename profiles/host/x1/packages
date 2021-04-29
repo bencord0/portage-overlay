@@ -1,0 +1,9 @@
+*app-crypt/efitools
+*app-crypt/sbsigntools
+kde-apps/kde-apps-meta
+kde-plasma/plasma-meta
+*net-misc/keychain
+*net-wireless/wpa_supplicant
+*sys-firmware/intel-microcode
+*sys-firmware/sof-firmware
+*sys-kernel/linux-firmware
