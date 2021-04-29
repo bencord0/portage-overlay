@@ -9,5 +9,5 @@ amd64           host/blog                       stable
 amd64           host/juniper                    stable
 amd64           host/parsley                    stable
 amd64           host/sandstorm                  stable
-amd64           host/x260                       stable
+amd64           host/x1                         stable
 amd64           host/x395                       stable
