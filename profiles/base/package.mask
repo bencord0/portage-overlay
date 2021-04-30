@@ -1,0 +1,3 @@
+# Mask source builds of rust
+# use dev-lang/rust-bin instead
+dev-lang/rust
