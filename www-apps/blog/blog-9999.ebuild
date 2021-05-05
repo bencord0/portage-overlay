@@ -17,7 +17,7 @@ else
 	KEYWORDS="~amd64 ~arm64 ~x86 ~amd64-linux ~x86-linux"
 fi
 
-LICENSE="MIT"
+LICENSE="GPL-3"
 SLOT="0"
 
 DISTUTILS_USE_SETUPTOOLS=rdepend
