@@ -1,3 +1,16 @@
+*app-admin/sudo
+*app-admin/certbot
 *dev-db/postgresql
+*net-analyzer/fail2ban
+*net-dns/bind-tools
+*net-misc/curl
+*net-misc/dhcp
+*net-misc/openssh
+*net-vpn/tailscale
+*sys-block/open-iscsi
+*sys-boot/grub
+*sys-fs/dosfstools
+*sys-fs/growpart
+*sys-kernel/gentoo-kernel-bin
 *www-apps/blog
 *www-servers/nginx
