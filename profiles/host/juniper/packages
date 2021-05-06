@@ -1,7 +1,7 @@
 *app-misc/tmux
 kde-apps/kde-apps-meta
 kde-plasma/plasma-meta
-*sys-boot/grub::bencord0
+*sys-boot/grub
 *sys-fs/dosfstools
 *sys-kernel/dracut
 *sys-kernel/linux-firmware
