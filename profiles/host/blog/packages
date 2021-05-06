@@ -1,5 +1,5 @@
 *app-admin/sudo
-*app-admin/certbot
+*app-crypt/certbot
 *dev-db/postgresql
 *net-analyzer/fail2ban
 *net-dns/bind-tools
