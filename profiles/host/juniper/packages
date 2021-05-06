@@ -1,7 +1,22 @@
-*app-misc/tmux
-kde-apps/kde-apps-meta
-kde-plasma/plasma-meta
+# CLI tools can belong in @system
+*app-admin/pass
+*app-admin/pass-otp
+*app-admin/sudo
+*app-admin/sysstat
+*app-benchmarks/pipebench
+
+# This uses an MBR based boot system
 *sys-boot/grub
 *sys-fs/dosfstools
 *sys-kernel/dracut
 *sys-kernel/linux-firmware
+
+# Needed for firefox nightly
+dev-libs/dbus-glib
+
+# Desktop Environment
+kde-apps/kde-apps-meta
+kde-plasma/plasma-meta
+
+# GUI tools can be part of @profile
+media-video/obs-studio

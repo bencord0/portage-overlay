@@ -1,4 +1,5 @@
 *app-editors/vim
 *app-eselect/eselect-repository
+*app-misc/tmux
 *app-portage/eix
 *dev-vcs/git
