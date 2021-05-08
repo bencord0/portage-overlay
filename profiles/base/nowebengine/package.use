@@ -1,5 +1,5 @@
 kde-apps/kdecore-meta -webengine
 kde-apps/kdeedu-meta -webengine
-kde-apps/kdenetwork-meta -webengine
+kde-apps/kdenetwork-meta -bittorrent -dropbox -samba -webengine
 kde-apps/kdeutils-meta -webengine
 kde-plasma/kdeplasma-addons -webengine
