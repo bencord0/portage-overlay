@@ -2,4 +2,5 @@ kde-apps/kdecore-meta -webengine
 kde-apps/kdeedu-meta -webengine
 kde-apps/kdenetwork-meta -bittorrent -dropbox -samba -webengine
 kde-apps/kdeutils-meta -webengine
+kde-misc/kio-gdrive -kaccounts
 kde-plasma/kdeplasma-addons -webengine
