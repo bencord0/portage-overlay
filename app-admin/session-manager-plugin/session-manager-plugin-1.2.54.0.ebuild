@@ -7,7 +7,7 @@ inherit rpm
 
 DESCRIPTION="AWS SSM Session Manager Plugin"
 HOMEPAGE="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html"
-SRC_URI="https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.rpm -> ${P}.rpm"
+SRC_URI="https://s3.amazonaws.com/session-manager-downloads/plugin/1.2.54.0/linux_64bit/session-manager-plugin.rpm -> ${P}.rpm"
 
 LICENSE="AWS-SSM-PLUGIN"
 SLOT="0"
