@@ -1,3 +1,3 @@
 ACCEPT_LICENSE="${ACCEPT_LICENSE} google-chrome intel-ucode linux-fw-redistributable MPEG-4 no-source-code NPSL"
-USE="${USE} -libglvnd pulseaudio wayland -webengine"
+USE="${USE} -libglvnd pulseaudio vulkan wayland -webengine"
 VIDEO_CARDS="intel"
