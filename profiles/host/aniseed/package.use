@@ -1,0 +1,3 @@
+dev-lang/python sqlite
+sys-libs/libseccomp static-libs
+www-servers/nginx rtmp
