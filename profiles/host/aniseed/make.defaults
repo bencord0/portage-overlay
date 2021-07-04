@@ -1,5 +1,5 @@
 ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE @EULA @FREE"
-LUA_SINGLE_TARGET="luajit"
+LUA_SINGLE_TARGET="-* luajit"
 
 LLVM_TARGETS="BPF X86"
 NGINX_MODULES_HTTP="access addition auth_basic auth_request auth_pam browser charset empty_gif fancyindex fastcgi geo gzip limit_conn limit_req map memcached proxy realip referer rewrite scgi split_clients ssi stub_status upstream_check upstream_ip_hash upstream_jdomain upstream_keepalive upstream_zone userid uwsgi"
