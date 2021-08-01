@@ -6,4 +6,5 @@ kde-plasma/plasma-meta
 mail-client/thunderbird-bin
 media-gfx/zbar
 media-gfx/openscad
+media-gfx/prusaslicer
 net-analyzer/wireshark
