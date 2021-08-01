@@ -1,0 +1,8 @@
+[Unit]
+Description="process killer for out-of-memory scenarios"
+
+[Service]
+ExecStart=/usr/bin/bustd --no-daemon
+
+[Install]
+WantedBy=default.target
