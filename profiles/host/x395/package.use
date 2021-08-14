@@ -1,5 +1,6 @@
 app-admin/pass-otp qrcode
 app-editors/vim python
+net-libs/gnutls tools
 net-wireless/bluez -cups
 sys-apps/systemd cgroup-hybrid curl gcrypt gnuefi importd lzma nat
 sys-apps/dbus user-session
