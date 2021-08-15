@@ -1,5 +1,6 @@
 app-admin/pass-otp qrcode
 app-editors/vim python
+kde-apps/cantor -analitza
 kde-apps/okular -postscript epub markdown mobi speech
 net-libs/gnutls tools
 net-wireless/bluez -cups
