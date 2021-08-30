@@ -1,3 +1,6 @@
 # WebEngine pulls in all of chromium's sources,
 # too big, not the compile time.
 dev-qt/qtwebengine
+
+# Use libreoffice-bin instead
+app-office/libreoffice
