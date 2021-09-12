@@ -1,2 +1,4 @@
 app-metrics/dnsrecordttl_exporter
+app-metrics/prometheus
+app-metrics/prometheus-bin
 dev-lang/go
