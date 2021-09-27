@@ -1,5 +1,6 @@
 app-admin/pass-otp qrcode
 app-editors/vim python
+dev-libs/libbpf static-libs
 dev-vcs/git tk
 kde-apps/cantor -analitza
 kde-apps/okular -postscript epub markdown mobi speech
