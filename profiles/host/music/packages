@@ -1,0 +1,10 @@
+*app-arch/unzip
+*dev-db/postgresql:12
+*dev-db/redis
+*dev-util/pkgconfig
+*net-misc/bridge-utils
+*net-misc/curl
+*net-nds/openldap
+*virtual/ffmpeg
+*virtual/jpeg
+*www-servers/nginx
