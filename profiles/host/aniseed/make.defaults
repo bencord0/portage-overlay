@@ -6,5 +6,3 @@ NGINX_MODULES_HTTP="access addition auth_basic auth_request auth_pam browser cha
 
 COLLECTD_PLUGINS="cpu disk dns network nginx ping python uptime write_graphite zfs_arc"
 USE="${USE} bash-completion -consolekit -split-usr systemd vim-syntax xattr"
-
-ABI_X86="32 64"
