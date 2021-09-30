@@ -1,0 +1,4 @@
+*app-arch/unzip
+*dev-db/postgresql:12
+*www-servers/nginx
+*dev-java/openjdk-jre-bin
