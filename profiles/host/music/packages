@@ -1,5 +1,5 @@
 *app-arch/unzip
-*dev-db/postgresql:12
+*dev-db/postgresql:13
 *dev-db/redis
 *net-misc/bridge-utils
 *net-misc/curl
