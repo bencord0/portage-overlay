@@ -1,0 +1,15 @@
+[Unit]
+Descritpion=Kine is not etcd
+
+[Service]
+User=kine
+Group=kine
+
+Environment=LISTEN_ADDRESS=127.0.0.1:2379
+Environment=ENDPOINT=postgres://localhost/kine
+ExecStart=/usr/bin/kine \
+    --listen-address=${LISTEN_ADDRESS} \
+    --endpoint=${ENDPOINT}
+
+[Install]
+WantedBy=multi-user.target
