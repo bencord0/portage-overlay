@@ -1,5 +1,5 @@
 [Unit]
-Descritpion=Kine is not etcd
+Description=Kine is not etcd
 
 [Service]
 User=kine
@@ -7,9 +7,21 @@ Group=kine
 
 Environment=LISTEN_ADDRESS=127.0.0.1:2379
 Environment=ENDPOINT=postgres://localhost/kine
+Environment=DATABASE_CA=/etc/kine/pki/ca.crt
+Environment=DATABASE_CLIENT_CERT=/etc/kine/pki/db_client.crt
+Environment=DATABASE_CLIENT_KEY=/etc/kine/pki/db_client.key
+Environment=SERVER_CERT=/etc/kine/pki/server.crt
+Environment=SERVER_KEY=/etc/kine/pki/server.key
+
 ExecStart=/usr/bin/kine \
     --listen-address=${LISTEN_ADDRESS} \
-    --endpoint=${ENDPOINT}
+    --endpoint=${ENDPOINT} \
+    --ca-file=${DATABASE_CA} \
+    --cert-file=${DATABASE_CLIENT_CERT} \
+    --key-file=${DATABASE_CLIENT_KEY} \
+    --server-cert-file=${SERVER_CERT} \
+    --server-key-file=${SERVER_KEY}
+
 
 [Install]
 WantedBy=multi-user.target
