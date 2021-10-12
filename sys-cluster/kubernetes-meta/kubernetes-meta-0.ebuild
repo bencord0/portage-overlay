@@ -16,6 +16,8 @@ RDEPEND="
 	sys-cluster/kube-apiserver
 "
 
+S="${WORKDIR}"
+
 src_install() {
 	systemd_dounit "{FILESDIR}/kube-apiserver.service"
 }
