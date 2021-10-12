@@ -1,0 +1,27 @@
+[Unit]
+Description=Kubernetes API Server
+
+[Service]
+User=kube-apiserver
+Group=kube-apiserver
+
+ExecStart=/usr/bin/kube-apiserver \
+        --bind-address=127.0.0.1 \
+        --secure-port=6443 \
+        --authorization-mode=Node,RBAC \
+        --enable-admission-plugins=NodeRestriction,PodSecurityPolicy \
+        --kubelet-preferred-address-types=ExternalIP,InternalIP \
+        --cert-dir=/var/run/kubernetes \
+        --client-ca-file=/var/run/kubernetes/ca.crt \
+        --service-cluster-ip-range=10.96.0.0/12 \
+        --etcd-servers=https://localhost:2379 \
+        --etcd-cafile=/var/run/kubernetes/ca.crt \
+        --etcd-certfile=/var/run/kubernetes/etcd_client.crt \
+        --etcd-keyfile=/var/run/kubernetes/etcd_client.key \
+        --api-audiences=https://kubernetes.default.svc \
+        --service-account-issuer=https://kubernetes.default.svc \
+        --service-account-key-file=/var/run/kubernetes/sa.crt \
+        --service-account-signing-key-file=/var/run/kubernetes/sa.key
+
+[Install]
+WantedBy=multi-user.target
