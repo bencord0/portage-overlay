@@ -19,5 +19,5 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install() {
-	systemd_dounit "{FILESDIR}/kube-apiserver.service"
+	systemd_dounit "${FILESDIR}/kube-apiserver.service"
 }
