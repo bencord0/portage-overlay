@@ -6,7 +6,6 @@ inherit systemd
 
 DESCRIPTION="Kubernetes configuration files"
 HOMEPAGE="https://kubernetes.io/docs/reference/command-line-tools-reference/"
-SRC_URI=""
 
 LICENSE="Apache-2.0"
 SLOT="0"
