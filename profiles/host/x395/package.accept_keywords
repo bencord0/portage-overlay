@@ -1,6 +1,7 @@
 app-misc/radeontop
 dev-libs/cereal
 dev-libs/libbpf
+dev-libs/miniz
 dev-util/bcc
 media-gfx/prusaslicer
 media-video/obs-studio
