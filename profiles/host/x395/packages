@@ -1,10 +1,16 @@
+app-backup/borgbackup
 app-misc/radeontop
 dev-util/bcc
 dev-util/catalyst
 kde-apps/kde-apps-meta
 kde-plasma/plasma-meta
 mail-client/thunderbird-bin
-media-gfx/zbar
+media-gfx/graphviz
 media-gfx/openscad
 media-gfx/prusaslicer
+media-gfx/zbar
+media-video/obs-studio
 net-analyzer/wireshark
+net-im/discord-bin
+net-im/signal-desktop-bin
+www-client/google-chrome
