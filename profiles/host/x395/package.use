@@ -4,6 +4,7 @@ dev-libs/libbpf static-libs
 dev-vcs/git tk
 kde-apps/cantor -analitza
 kde-apps/okular -postscript epub markdown mobi speech
+media-libs/freetype harfbuzz
 net-libs/gnutls tools
 net-wireless/bluez -cups
 sys-apps/systemd cgroup-hybrid curl gcrypt gnuefi importd lzma nat
