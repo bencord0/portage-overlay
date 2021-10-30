@@ -4,8 +4,6 @@
 
 EAPI=8
 
-inherit user
-
 DESCRIPTION="Datacenter Cluster Operating System"
 HOMEPAGE="http://mesos.apache.org/"
 SRC_URI="http://archive.apache.org/dist/mesos/${PV}/${P}.tar.gz"
@@ -32,12 +30,11 @@ DEPEND="
 	dev-vcs/subversion
 	sys-apps/ethtool
 "
-RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	enewgroup mesos
-	enewuser mesos -1 /bin/sh /var/lib/mesos mesos
-}
+RDEPEND="
+	${DEPEND}
+	acct-user/mesos
+	acct-group/mesos
+"
 
 src_configure() {
 
