@@ -4,11 +4,11 @@
 
 EAPI=8
 
-inherit cmake-utils
+inherit cmake
 
 DESCRIPTION="Offline and private journal and note taking application"
 HOMEPAGE="http://lifeograph.sourceforge.net/wiki/Main_Page"
-SRC_URI="https://launchpad.net/lifeograph/trunk/${PV}/+download/${P}.tar.gz"
+SRC_URI="https://launchpad.net/lifeograph/trunk/${PV}/+download/${P}.tar.xz"
 
 LICENSE="GPL3"
 SLOT="0"
