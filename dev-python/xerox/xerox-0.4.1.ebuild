@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=9
+EAPI=8
 
-PYTHON_COMPAT=( python{2_{6,7},3_{3,4,5}} pypy pypy2_0 )
+PYTHON_COMPAT=( python3_{8..10} )
 inherit distutils-r1
 
 DESCRIPTION="Copy + Paste in Python"

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake-utils
+inherit cmake
 
 DESCRIPTION="OpenTracing API for C++"
 HOMEPAGE="http://opentracing.io"
