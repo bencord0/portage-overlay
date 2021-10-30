@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit cmake-utils eapi7-ver
+inherit cmake
 
 MY_P="CSFML-${PV}"
 
