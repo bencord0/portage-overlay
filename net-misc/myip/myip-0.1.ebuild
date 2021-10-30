@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=8
 
 DESCRIPTION="A small program to find my IP"
 HOMEPAGE="https://github.com/bencord0/myip"

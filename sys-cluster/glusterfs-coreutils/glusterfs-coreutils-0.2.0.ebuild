@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=8
 
 DESCRIPTION="Tools that work directly on Gluster volumes"
 HOMEPAGE="https://github.com/gluster/glusterfs-coreutils"

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=8
 
 DESCRIPTION="Shamir's secret sharing scheme for UNIX/linux machines."
 HOMEPAGE="http://point-at-infinity.org/ssss/"
