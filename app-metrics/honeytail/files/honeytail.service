@@ -1,0 +1,9 @@
+[Unit]
+Description=Honeycomb log agent (Honeytail)
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/honeytail -c /etc/honeytail/honeytail.conf
+
+[Install]
+WantedBy=multi-user.target
