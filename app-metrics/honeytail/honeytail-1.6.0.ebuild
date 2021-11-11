@@ -105,7 +105,7 @@ go-module_set_globals
 
 DESCRIPTION="Honeycomb agent for extracting data from logs"
 HOMEPAGE="https://honeycomb.io/docs/send-data/agent/"
-SRC_URI="https://github.com/honeycombio/honeytail/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz
+SRC_URI="https://github.com/honeycombio/honeytail/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="Apache-2.0"
