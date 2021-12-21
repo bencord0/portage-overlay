@@ -1,0 +1,13 @@
+[Unit]
+Description=Prometheus remote storage adapter for postgresql
+
+[Service]
+Type=simple
+User=nobody
+Group=nobody
+
+Environment=DATABASE_URL=postgres://localhost:5432/prometheus
+ExecStart=/usr/bin/postgresql-prometheus-adapter
+
+[Install]
+WantedBy=multi-user.target
