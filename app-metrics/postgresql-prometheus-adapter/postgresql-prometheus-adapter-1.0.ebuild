@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module
+inherit go-module systemd
 
 EGO_SUM=(
     "cloud.google.com/go v0.26.0/go.mod"
