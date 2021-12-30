@@ -1,9 +1,9 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_9 )
+PYTHON_COMPAT=( python3_{9,10} )
 inherit distutils-r1
 
 DESCRIPTION="Blog engine behind blog.condi.me"
@@ -20,7 +20,6 @@ fi
 LICENSE="GPL-3"
 SLOT="0"
 
-DISTUTILS_USE_SETUPTOOLS=rdepend
 RDEPEND="
 	dev-python/arrow[${PYTHON_USEDEP}]
 	dev-python/dj-database-url[${PYTHON_USEDEP}]
