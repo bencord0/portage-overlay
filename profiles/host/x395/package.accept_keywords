@@ -1,9 +1,11 @@
 app-misc/radeontop
+dev-cpp/tbb
 dev-libs/cereal
 dev-libs/libbpf
 dev-libs/miniz
 dev-util/bcc
 media-gfx/prusaslicer
+media-gfx/openvdb
 media-video/obs-studio
 net-im/discord-bin
 net-im/signal-desktop-bin
