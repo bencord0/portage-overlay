@@ -7,6 +7,7 @@ kde-apps/okular -postscript epub markdown mobi speech
 media-libs/freetype harfbuzz
 media-libs/qhull static-libs
 net-libs/gnutls tools
+net-misc/curl adns
 net-wireless/bluez -cups
 sys-apps/systemd cgroup-hybrid curl gcrypt gnuefi importd lzma nat
 sys-apps/dbus user-session
