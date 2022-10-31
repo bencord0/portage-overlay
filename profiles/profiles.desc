@@ -1,6 +1,7 @@
 # layout:
 # arch          profile_directory               status
 
+amd64           default/linux/amd64/docker      stable
 amd64           default/linux/amd64/nspawn      stable
 arm             default/linux/arm/armv6j/nspawn dev
 arm             default/linux/arm/armv7a/nspawn dev
