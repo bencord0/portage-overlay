@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
+	dev-db/postgresql
 	dev-python/cffi[${PYTHON_USEDEP}]
 "
 RDEPEND="
