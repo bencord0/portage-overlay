@@ -1,5 +1,7 @@
 app-backup/borgbackup
 app-misc/radeontop
+app-office/libreoffice-bin
+dev-db/postgresql
 dev-util/bcc
 dev-util/catalyst
 kde-apps/kde-apps-meta
