@@ -4,6 +4,7 @@ dev-libs/libbpf static-libs
 dev-vcs/git tk
 kde-apps/cantor -analitza
 kde-apps/okular -postscript epub markdown mobi speech
+kde-plasma/plasma-meta -crypt -desktop-portal -discover networkmanager qrcode
 media-libs/freetype harfbuzz
 media-libs/qhull static-libs
 media-libs/libsdl2 gles2 haptic
