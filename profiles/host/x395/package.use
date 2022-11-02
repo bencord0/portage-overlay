@@ -13,4 +13,5 @@ net-wireless/bluez -cups
 sys-apps/systemd cgroup-hybrid curl gcrypt gnuefi importd lzma nat
 sys-apps/dbus user-session
 sys-apps/util-linux python
+sys-apps/xdg-desktop-portal screencast
 x11-libs/gtk+ -cups
