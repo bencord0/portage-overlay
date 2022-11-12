@@ -1,0 +1,13 @@
+[Unit]
+Description=Mastodon Server
+
+[Service]
+User=mastodon
+Group=mastodon
+WorkingDirectory=/usr/share/mastodon
+
+EnvironmentFile=/etc/mastodon/env
+ExecStart=/usr/bin/bundle exec puma -C config/puma.rb
+
+[Install]
+WantedBy=multi-user.target
