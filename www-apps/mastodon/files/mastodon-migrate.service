@@ -1,0 +1,14 @@
+[Unit]
+Description=Mastodon Database Updates
+
+[Service]
+Type=oneshot
+User=mastodon
+Group=mastodon
+WorkingDirectory=/usr/share/mastodon
+
+EnvironmentFile=/etc/mastodon/env
+ExecStart=/usr/bin/bundle exec rake db:migrate
+
+[Install]
+WantedBy=multi-user.target
