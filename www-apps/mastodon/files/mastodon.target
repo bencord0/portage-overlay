@@ -1,0 +1,6 @@
+[Unit]
+Description=Mastodon Services
+Wants=mastodon.service mastodon-sidekiq.service mastodon-streaming.service redis.service postgresql-13.service
+
+[Install]
+WantedBy=multi-user.target

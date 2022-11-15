@@ -1,5 +1,7 @@
 [Unit]
 Description=Mastodon Sidekiq
+Requires=mastodon-migrate.service
+After=mastodon-migrate.service
 
 [Service]
 User=mastodon

@@ -1,5 +1,7 @@
 [Unit]
 Description=Mastodon Database Updates
+Requires=postgresql-13.service
+After=postgresql-13.service
 
 [Service]
 Type=oneshot

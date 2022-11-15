@@ -330,9 +330,12 @@ all_ruby_compile() {
 }
 
 all_ruby_install() {
+	rm -r node_modules || die
+
 	insinto /usr/share/mastodon
 	doins -r .
 
+	systemd_dounit "${FILESDIR}/mastodon.target"
 	systemd_dounit "${FILESDIR}/mastodon.service"
 	systemd_dounit "${FILESDIR}/mastodon-migrate.service"
 	systemd_dounit "${FILESDIR}/mastodon-sidekiq.service"
