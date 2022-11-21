@@ -53,8 +53,6 @@ all_ruby_compile() {
 }
 
 all_ruby_install() {
-	rm -r node_modules || die
-
 	mkdir -p "${D}/usr/share/mastodon" || die "mkdir /usr/share/mastodon"
 	cp -av . "${D}/usr/share/mastodon/" || die "install failed"
 	chown mastodon:mastodon "${D}/usr/share/mastodon/.bundle/config" || die "chown bundle config"
