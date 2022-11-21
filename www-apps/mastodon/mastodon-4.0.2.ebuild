@@ -30,6 +30,9 @@ RDEPEND="
 	net-dns/libidn
 "
 
+ruby_add_depend "
+	dev-ruby/bundler
+"
 ruby_add_rdepend "
 	dev-ruby/bundler
 "
@@ -46,7 +49,7 @@ all_ruby_compile() {
 	bundle install || die "Unable to install gems"
 	yarn install || die "yarn install"
 	NODE_ENV=production RAILS_ENV=production OTP_SECRET=precompile SECRET_KEY_BASE=precompile \
-		rake assets:precompile || die "Unable to precompile assets"
+		bundle exec rake assets:precompile || die "Unable to precompile assets"
 }
 
 all_ruby_install() {
