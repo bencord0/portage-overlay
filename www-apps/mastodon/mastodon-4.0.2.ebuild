@@ -27,6 +27,7 @@ RDEPEND="
 	acct-group/mastodon
 	dev-db/postgresql:*
 	dev-libs/icu
+	media-video/ffmpeg
 	net-dns/libidn
 "
 
