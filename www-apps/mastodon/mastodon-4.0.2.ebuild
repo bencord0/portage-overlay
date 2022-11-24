@@ -27,7 +27,7 @@ RDEPEND="
 	acct-group/mastodon
 	dev-db/postgresql:*
 	dev-libs/icu
-	media-gfx/imagemagick
+	media-gfx/imagemagick[jpeg,png,raw,svg,tiff,webp]
 	media-video/ffmpeg
 	net-dns/libidn
 "
