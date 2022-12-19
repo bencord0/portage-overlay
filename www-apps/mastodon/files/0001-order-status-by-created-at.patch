@@ -11,3 +11,20 @@ index 8bdb5e8db..879cf2f62 100644
    scope :remote, -> { where(local: false).where.not(uri: nil) }
    scope :local,  -> { where(local: true).or(where(uri: nil)) }
    scope :with_accounts, ->(ids) { where(id: ids).includes(:account) }
+diff --git a/db/migrate/20221219020202_add_created_at_index_to_statuses.rb b/db/migrate/20221219020202_add_created_at_index_to_statuses.rb
+new file mode 100644
+index 000000000..72ae9f949
+--- /dev/null
++++ b/db/migrate/20221219020202_add_created_at_index_to_statuses.rb
+@@ -0,0 +1,11 @@
++class AddCreatedAtIndexToStatuses < ActiveRecord::Migration[5.2]
++  disable_ddl_transaction!
++
++  def up
++    add_index :statuses, [:account_id, :created_at], where: 'deleted_at IS NULL', order: { created_at: :desc }, algorithm: :concurrently, name: :index_statuses_created_at_20221219
++  end
++
++  def down
++    remove_index :statuses, name: :index_statuses_created_at_20221219
++  end
++end
