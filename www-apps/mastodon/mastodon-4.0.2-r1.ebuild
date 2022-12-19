@@ -32,6 +32,10 @@ RDEPEND="
 	net-dns/libidn
 "
 
+PATCHES=(
+	"${FILESDIR}/0001-order-status-by-created-at.patch"
+)
+
 ruby_add_depend "
 	dev-ruby/bundler
 "
