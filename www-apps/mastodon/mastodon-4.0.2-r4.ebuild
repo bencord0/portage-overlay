@@ -25,6 +25,7 @@ DEPEND="
 RDEPEND="
 	acct-user/mastodon
 	acct-group/mastodon
+	app-admin/awscli-bin
 	dev-db/postgresql:*
 	dev-libs/icu
 	media-gfx/imagemagick[jpeg,png,raw,svg,tiff,webp,xml]
@@ -36,6 +37,7 @@ RDEPEND="
 PATCHES=(
 	"${FILESDIR}/0001-order-status-by-created-at.patch"
 	"${FILESDIR}/0002-toot-character-limit-1000.patch"
+	"${FILESDIR}/0003-publish-is-toot.patch"
 )
 
 ruby_add_depend "
