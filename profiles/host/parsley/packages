@@ -1,0 +1,7 @@
+app-admin/logrotate
+app-admin/sysstat
+net-dns/bind
+net-dns/bind-tools
+net-nds/openldap
+net-proxy/haproxy
+www-servers/nginx
