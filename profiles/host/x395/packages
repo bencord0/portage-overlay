@@ -9,6 +9,7 @@ dev-util/catalyst
 kde-apps/kde-apps-meta
 kde-plasma/plasma-meta
 mail-client/thunderbird-bin
+media-gfx/darktable
 media-gfx/graphviz
 media-gfx/openscad
 media-gfx/prusaslicer
