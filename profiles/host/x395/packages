@@ -1,3 +1,5 @@
+app-admin/pass
+app-admin/pass-otp
 app-backup/borgbackup
 app-misc/radeontop
 app-office/libreoffice-bin
@@ -11,8 +13,17 @@ media-gfx/graphviz
 media-gfx/openscad
 media-gfx/prusaslicer
 media-gfx/zbar
+media-video/mpv
 media-video/obs-studio
 net-analyzer/wireshark
-net-im/discord-bin
+net-dns/bind-tools
+net-im/discord
 net-im/signal-desktop-bin
+net-wireless/wpa_supplicant
+sys-fs/fuse:0
+sys-fs/zfs
+sys-kernel/dracut
+sys-kernel/linux-firmware
+www-client/links
 www-client/google-chrome
+www-plugins/passff-host

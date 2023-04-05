@@ -9,8 +9,9 @@ kde-apps/kdeutils-meta -cups
 kde-apps/krdc -rdp
 kde-plasma/plasma-meta -crypt -desktop-portal -discover networkmanager qrcode
 media-libs/freetype harfbuzz
-media-libs/qhull static-libs
 media-libs/libsdl2 gles2 haptic
+media-libs/libsndfile minimal
+media-libs/qhull static-libs
 media-video/ffmpeg libass
 net-libs/gnutls tools
 net-misc/curl adns
@@ -19,4 +20,6 @@ sys-apps/systemd cgroup-hybrid curl gcrypt gnuefi importd lzma nat
 sys-apps/dbus user-session
 sys-apps/util-linux python
 sys-apps/xdg-desktop-portal screencast
+sys-devel/gcc graphite
+sys-libs/ncurses -gpm
 x11-libs/gtk+ -cups
