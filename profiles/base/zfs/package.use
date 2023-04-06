@@ -1,1 +1,2 @@
 sys-fs/zfs dist-kernel rootfs
+sys-fs/zfs-kmod dist-kernel rootfs
