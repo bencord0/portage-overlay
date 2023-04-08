@@ -12,6 +12,7 @@ amd64           host/blog                       stable
 amd64           host/juniper                    stable
 amd64           host/kubernetes                 stable
 amd64           host/mastodon                   stable
+amd64           host/mastodon/systemd           stable
 amd64           host/music                      stable
 amd64           host/parsley                    stable
 amd64           host/prometheus                 stable
