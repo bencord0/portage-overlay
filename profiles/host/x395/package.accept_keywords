@@ -1,3 +1,4 @@
+app-admin/awscli-bin
 app-misc/radeontop
 dev-cpp/tbb
 dev-libs/cereal
