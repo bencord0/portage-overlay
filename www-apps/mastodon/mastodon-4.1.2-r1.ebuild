@@ -36,7 +36,7 @@ RDEPEND="
 
 PATCHES=(
 	"${FILESDIR}/0001-order-status-by-created-at.patch"
-	"${FILESDIR}/0002-toot-character-limit-1000.patch"
+	"${FILESDIR}/0002a-toot-character-limit-1000.patch"
 	"${FILESDIR}/0003-publish-is-toot.patch"
 )
 
