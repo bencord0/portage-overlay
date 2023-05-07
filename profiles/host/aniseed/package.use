@@ -1,4 +1,5 @@
 app-emulation/qemu -pin-upstream-blobs
+app-misc/mime-types nginx
 dev-lang/python sqlite
 sys-libs/libseccomp static-libs
 www-servers/nginx rtmp
