@@ -1,10 +1,10 @@
-FROM alpine:3.11 as builder
+FROM docker.io/library/alpine as builder
 WORKDIR /overlay
 
 ARG OVERLAY_NAME=bencord0
 COPY . "var/db/repos/${OVERLAY_NAME}"
 
-FROM busybox:latest
+FROM docker.io/library/busybox
 WORKDIR /
 
 COPY --from=builder /overlay /

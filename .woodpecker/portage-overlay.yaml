@@ -1,0 +1,14 @@
+steps:
+  build:
+    image: bash
+    commands:
+    - |
+      podman build -t meta.registry.condi.me/portage-overlay .
+
+  push:
+    image: bash
+    secrets: [registry_username, registry_password]
+    commands:
+    - |
+      podman login --username $${REGISTRY_USERNAME} --password $${REGISTRY_PASSWORD} meta.registry.condi.me
+      podman push meta.registry.condi.me/portage-overlay

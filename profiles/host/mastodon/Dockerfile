@@ -1,6 +1,6 @@
-FROM gentoo/portage as gentoo
-FROM ghcr.io/bencord0/portage-overlay:master as bencord0
-FROM gentoo/stage3 as stage3
+FROM docker.io/gentoo/portage as gentoo
+FROM meta.registry.condi.me/portage-overlay as bencord0
+FROM docker.io/gentoo/stage3 as stage3
 
 COPY locale.gen /etc/locale.gen
 COPY repos.conf /etc/portage/repos.conf

@@ -1,0 +1,23 @@
+depends_on:
+- portage-overlay
+
+steps:
+  build:
+    image: bash
+    environment:
+    - TMPDIR=/var/tmp/woodpecker
+    commands:
+    - |
+      mkdir -p /var/tmp/woodpecker
+      podman build \
+        -t meta.registry.condi.me/mastodon \
+        -f profiles/host/mastodon/Dockerfile \
+        profiles/host/mastodon/docker-context
+
+  push:
+    image: bash
+    secrets: [registry_username, registry_password]
+    commands:
+    - |
+      podman login --username $${REGISTRY_USERNAME} --password $${REGISTRY_PASSWORD} meta.registry.condi.me
+      podman push meta.registry.condi.me/mastodon
