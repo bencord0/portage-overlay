@@ -1,0 +1,2 @@
+# Until all dependencies are published to accept openssl-3
+>dev-libs/openssl-3
