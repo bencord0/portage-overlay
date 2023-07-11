@@ -1,7 +1,7 @@
 dev-db/postgis postgres_targets_postgres9_6 postgres_targets_postgres12
 dev-db/postgresql static-libs
 dev-libs/openssl static-libs
-kde-apps/kde-apps-meta -education -games -graphics -multimedia -network
+kde-apps/kde-apps-meta -education -games -graphics -multimedia -network -utils
 kde-plasma/plasma-meta -crypt -legacy-systray
 media-libs/libsdl2 gles2
 net-libs/gnutls tools
