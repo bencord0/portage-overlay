@@ -5,9 +5,10 @@ EAPI=8
 
 inherit acct-user
 
-DESCRIPTION=""
+DESCRIPTION="Code Server user"
 ACCT_USER_ID=-1
 ACCT_USER_GROUPS=( code )
 ACCT_USER_HOME=/var/lib/code
+ACCT_USER_SHELL=/bin/bash
 
 acct-user_add_deps
