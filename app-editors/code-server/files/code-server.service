@@ -1,0 +1,10 @@
+[Unit]
+Description=VSCode in a Browser
+
+[Service]
+User=code
+Group=code
+ExecStart=/usr/lib/code-server/bin/code-server
+
+[Install]
+WantedBy=default.target

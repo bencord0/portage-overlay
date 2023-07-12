@@ -1,4 +1,5 @@
 *app-editors/neovim
+*app-editors/code-server
 *dev-db/sqlite
 *dev-lang/go
 *dev-lang/python
