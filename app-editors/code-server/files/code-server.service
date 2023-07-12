@@ -4,7 +4,7 @@ Description=VSCode in a Browser
 [Service]
 User=code
 Group=code
-ExecStart=/usr/lib/code-server/bin/code-server
+ExecStart=/usr/lib/code-server/bin/code-server --config /etc/code-server/config.yaml
 
 [Install]
 WantedBy=default.target

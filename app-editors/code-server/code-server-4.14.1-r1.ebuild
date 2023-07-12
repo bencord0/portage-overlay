@@ -27,4 +27,8 @@ src_install() {
 	cp -av . "${D}/usr/lib/code-server" || die "install failed"
 
 	systemd_dounit "${FILESDIR}/code-server.service"
+
+	insinto /etc/code-server
+	insopts -m 644
+	doins "${FILESDIR}/config.yaml"
 }
