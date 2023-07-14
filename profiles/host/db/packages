@@ -1,0 +1,3 @@
+dev-db/mariadb:10.4
+dev-db/postgresql:13
+dev-db/redis

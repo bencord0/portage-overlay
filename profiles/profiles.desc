@@ -10,6 +10,7 @@ amd64           host/aniseed                    stable
 amd64           host/artifactory                stable
 amd64           host/blog                       stable
 amd64           host/codeserver                 stable
+amd64           host/db                         stable
 amd64           host/juniper                    stable
 amd64           host/kubernetes                 stable
 amd64           host/mastodon                   stable
