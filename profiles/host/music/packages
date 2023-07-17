@@ -1,6 +1,7 @@
 *app-arch/unzip
 *dev-db/postgresql:13
 *dev-db/redis
+*dev-libs/cyrus-sasl
 *net-misc/bridge-utils
 *net-misc/curl
 *net-nds/openldap
