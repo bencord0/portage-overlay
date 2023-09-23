@@ -3,7 +3,7 @@
 
 EAPI=8
 
-USE_RUBY="ruby30"
+USE_RUBY="ruby31 ruby32"
 inherit ruby-ng systemd
 
 DESCRIPTION="Your self-hosted, globally interconnected microblogging community "
