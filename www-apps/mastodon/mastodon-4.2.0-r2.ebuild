@@ -28,6 +28,7 @@ RDEPEND="
 	app-admin/awscli-bin
 	dev-db/postgresql:*
 	dev-libs/icu
+	>=dev-libs/openssl-3.1.0
 	media-gfx/imagemagick[jpeg,png,raw,svg,tiff,webp,xml]
 	media-video/ffmpeg
 	net-dns/libidn
