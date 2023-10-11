@@ -15,7 +15,15 @@ RUN \
     --mount=type=bind,target=/var/db/repos/bencord0,source=/var/db/repos/bencord0,from=bencord0 \
     --mount=type=cache,target=/var/cache/binpkgs \
     --mount=type=cache,target=/var/cache/distfiles \
-    emerge --quiet --deep --newuse --jobs \
+    emerge getuto && getuto
+
+
+RUN \
+    --mount=type=bind,target=/var/db/repos/gentoo,source=/var/db/repos/gentoo,from=gentoo \
+    --mount=type=bind,target=/var/db/repos/bencord0,source=/var/db/repos/bencord0,from=bencord0 \
+    --mount=type=cache,target=/var/cache/binpkgs \
+    --mount=type=cache,target=/var/cache/distfiles \
+    emerge --verbose --deep --newuse --jobs \
         @system
 
 RUN \
