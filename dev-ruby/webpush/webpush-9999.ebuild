@@ -3,7 +3,7 @@
 
 EAPI=8
 
-USE_RUBY="ruby27 ruby30 ruby31"
+USE_RUBY="ruby31"
 inherit ruby-fakegem
 
 if [[ ${PV} == 9999 ]] ; then
