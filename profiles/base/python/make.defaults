@@ -1,3 +1,3 @@
-BOOTSTRAP_USE="-* python_targets_python3_9 python_targets_python3_10 python_targets_python3_11"
-PYTHON_TARGETS="-* python3_9 python3_10 python3_11"
+BOOTSTRAP_USE="-* python_targets_python3_11"
+PYTHON_TARGETS="-* python3_11"
 PYTHON_SINGLE_TARGET="-* python3_11"
