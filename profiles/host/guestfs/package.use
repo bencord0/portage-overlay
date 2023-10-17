@@ -1,3 +1,4 @@
+app-emulation/qemu -pin-upstream-blobs
 app-arch/unzip natspec
 net-dns/dnsmasq script
 net-libs/gnutls pkcs11 tools
