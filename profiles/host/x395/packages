@@ -6,7 +6,6 @@ app-misc/radeontop
 app-office/libreoffice-bin
 dev-db/postgresql
 dev-util/bcc
-dev-util/catalyst
 kde-apps/kde-apps-meta
 kde-plasma/plasma-meta
 mail-client/thunderbird-bin
