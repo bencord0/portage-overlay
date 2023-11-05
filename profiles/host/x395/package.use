@@ -1,18 +1,20 @@
 app-admin/pass-otp qrcode
 app-editors/vim python
 dev-libs/libbpf static-libs
+dev-libs/libpcre2 pcre32
 dev-vcs/git tk
 kde-apps/cantor -analitza
 kde-apps/okular -postscript epub markdown mobi speech
+kde-apps/kde-apps-meta -utils
 kde-apps/kdemultimedia-meta -cdrom
 kde-apps/kdeutils-meta -cups
 kde-apps/krdc -rdp
 kde-plasma/plasma-meta -crypt -desktop-portal -discover networkmanager qrcode
-media-libs/freetype harfbuzz
+media-libs/freetype -harfbuzz
 media-libs/libsdl2 gles2 haptic
 media-libs/libsndfile minimal
 media-libs/qhull static-libs
-media-video/ffmpeg libass
+media-video/ffmpeg libass opus
 net-libs/gnutls tools
 net-misc/curl adns
 net-wireless/bluez -cups

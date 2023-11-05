@@ -1,3 +1,3 @@
-ACCEPT_LICENSE="${ACCEPT_LICENSE} google-chrome intel-ucode MPEG-4 NPSL"
+ACCEPT_LICENSE="${ACCEPT_LICENSE} all-rights-reserved google-chrome intel-ucode linux-fw-redistributable MPEG-4 NPSL"
 USE="${USE} pulseaudio vaapi vulkan wayland -webengine"
 VIDEO_CARDS="amdgpu radeonsi"

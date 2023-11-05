@@ -7,8 +7,10 @@ dev-libs/miniz
 dev-util/bcc
 media-gfx/prusaslicer
 media-gfx/openvdb
+media-libs/nanosvg
 media-video/obs-studio
 net-im/discord-bin
 net-im/signal-desktop-bin
 sci-libs/libigl
 www-plugins/passff-host
+x11-libs/wxGTK
