@@ -15,7 +15,7 @@ RUN \
     --mount=type=bind,target=/var/db/repos/bencord0,source=/var/db/repos/bencord0,from=bencord0 \
     --mount=type=cache,target=/var/cache/binpkgs \
     --mount=type=cache,target=/var/cache/distfiles \
-    emerge getuto && getuto
+    env FEATURES=binpkg-ignore-signature emerge getuto && getuto
 
 
 RUN \
