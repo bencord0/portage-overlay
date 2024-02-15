@@ -1,0 +1,66 @@
+From a1c61b9f1d497c5f0c1bc7e53470d0d00761486c Mon Sep 17 00:00:00 2001
+From: Matt Jankowski <matt@jankowski.online>
+Date: Tue, 6 Feb 2024 04:33:11 -0500
+Subject: [PATCH] Update `nsa` gem to version 0.3.0 (#29065)
+
+---
+ Gemfile      |  2 +-
+ Gemfile.lock | 18 ++++++------------
+ 2 files changed, 7 insertions(+), 13 deletions(-)
+
+diff --git a/Gemfile b/Gemfile
+index 6f20ff25a564c..829e7d8574d41 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -61,7 +61,7 @@ gem 'kaminari', '~> 1.2'
+ gem 'link_header', '~> 0.0'
+ gem 'mime-types', '~> 3.5.0', require: 'mime/types/columnar'
+ gem 'nokogiri', '~> 1.15'
+-gem 'nsa', github: 'jhawthorn/nsa', ref: 'e020fcc3a54d993ab45b7194d89ab720296c111b'
++gem 'nsa'
+ gem 'oj', '~> 3.14'
+ gem 'ox', '~> 2.14'
+ gem 'parslet'
+diff --git a/Gemfile.lock b/Gemfile.lock
+index 1c767859b1484..37553641c0846 100644
+--- a/Gemfile.lock
++++ b/Gemfile.lock
+@@ -7,17 +7,6 @@ GIT
+       hkdf (~> 0.2)
+       jwt (~> 2.0)
+ 
+-GIT
+-  remote: https://github.com/jhawthorn/nsa.git
+-  revision: e020fcc3a54d993ab45b7194d89ab720296c111b
+-  ref: e020fcc3a54d993ab45b7194d89ab720296c111b
+-  specs:
+-    nsa (0.2.8)
+-      activesupport (>= 4.2, < 7.2)
+-      concurrent-ruby (~> 1.0, >= 1.0.2)
+-      sidekiq (>= 3.5)
+-      statsd-ruby (~> 1.4, >= 1.4.0)
+-
+ GIT
+   remote: https://github.com/mastodon/rails-settings-cached.git
+   revision: 86328ef0bd04ce21cc0504ff5e334591e8c2ccab
+@@ -483,6 +472,11 @@ GEM
+     nokogiri (1.16.2)
+       mini_portile2 (~> 2.8.2)
+       racc (~> 1.4)
++    nsa (0.3.0)
++      activesupport (>= 4.2, < 7.2)
++      concurrent-ruby (~> 1.0, >= 1.0.2)
++      sidekiq (>= 3.5)
++      statsd-ruby (~> 1.4, >= 1.4.0)
+     oj (3.16.1)
+     omniauth (2.1.1)
+       hashie (>= 3.4.6)
+@@ -884,7 +878,7 @@ DEPENDENCIES
+   net-http (~> 0.3.2)
+   net-ldap (~> 0.18)
+   nokogiri (~> 1.15)
+-  nsa!
++  nsa
+   oj (~> 3.14)
+   omniauth (~> 2.0)
+   omniauth-cas!
