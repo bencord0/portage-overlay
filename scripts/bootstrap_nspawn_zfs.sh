@@ -31,13 +31,16 @@ location = /var/db/repos/bencord0
 EOF
 
 # In lieu of a stage3 tarball
-emerge --jobs --root="${root}" --sysroot="${root}" --config-root="${root}" sys-apps/baselayout
-USE="build -udev" emerge --jobs --root="${root}" --sysroot="${root}" --config-root="${root}" @system
+emerge --jobs --root="${root}" --config-root="${root}" sys-apps/baselayout
+USE="build -udev" emerge --jobs --root="${root}" --config-root="${root}" @system
 
 # Set final profile
 rm -v "${root}/etc/portage/make.profile"
 ln -sf "/var/db/repos/bencord0/profiles/host/${profile}" "${root}/etc/portage/make.profile"
 zfs snap "${zpool}/machines/${machine}@gentoo-clean"
+
+emerge --jobs --root="${root}" --sysroot="${sysroot}" --config-root="${root}" @world @profile
+zfs snap "${zpool}/machines/${machine}@world-clean"
 
 cat << EOF > "/etc/systemd/nspawn/${machine}.nspawn"
 [Exec]
