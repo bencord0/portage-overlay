@@ -1,3 +1,4 @@
 gentoo:default/linux/amd64/17.1/systemd/merged-usr
+bencord0:default/linux/amd64
 bencord0:base/python
 bencord0:base
