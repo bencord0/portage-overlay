@@ -39,8 +39,8 @@ PATCHES=(
 	"${FILESDIR}/0001-order-status-by-created-at.patch"
 	"${FILESDIR}/0002b-toot-character-limit-1000.patch"
 	"${FILESDIR}/0003a-publish-is-toot.patch"
-	"${FILESDIR}/0004-sidekiq-crawler.patch"
-	"${FILESDIR}/0005-sidekiq-threadresolver.patch"
+	"${FILESDIR}/0004-sidekiq-threadresolver.patch"
+	"${FILESDIR}/0005-sidekiq-crawler.patch"
 )
 
 ruby_add_depend "

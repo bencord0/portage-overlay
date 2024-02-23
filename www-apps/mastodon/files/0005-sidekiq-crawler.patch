@@ -12,7 +12,7 @@ index c63af1e43..8d6cd9ee7 100644
    def perform(status_id)
      FetchLinkCardService.new.call(Status.find(status_id))
 diff --git a/config/sidekiq.yml b/config/sidekiq.yml
-index f1ba5651d..e0c4cabcf 100644
+index 711361ea7..30f2582dd 100644
 --- a/config/sidekiq.yml
 +++ b/config/sidekiq.yml
 @@ -6,6 +6,7 @@
@@ -20,6 +20,6 @@ index f1ba5651d..e0c4cabcf 100644
    - [mailers, 2]
    - [pull]
 +  - [crawler]
+   - [threadresolver]
    - [scheduler]
  :scheduler:
-   :listened_queues_only: true
