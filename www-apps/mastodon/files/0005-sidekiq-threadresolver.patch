@@ -1,0 +1,25 @@
+diff --git a/app/workers/thread_resolve_worker.rb b/app/workers/thread_resolve_worker.rb
+index d4cefb3fd..23fbec0e5 100644
+--- a/app/workers/thread_resolve_worker.rb
++++ b/app/workers/thread_resolve_worker.rb
+@@ -4,7 +4,7 @@ class ThreadResolveWorker
+   include Sidekiq::Worker
+   include ExponentialBackoff
+ 
+-  sidekiq_options queue: 'pull', retry: 3
++  sidekiq_options queue: 'threadresolver', retry: 3
+ 
+   def perform(child_status_id, parent_url, options = {})
+     child_status = Status.find(child_status_id)
+diff --git a/config/sidekiq.yml b/config/sidekiq.yml
+index f1ba5651d..711361ea7 100644
+--- a/config/sidekiq.yml
++++ b/config/sidekiq.yml
+@@ -6,6 +6,7 @@
+   - [ingress, 4]
+   - [mailers, 2]
+   - [pull]
++  - [threadresolver]
+   - [scheduler]
+ :scheduler:
+   :listened_queues_only: true

@@ -1,0 +1,25 @@
+diff --git a/app/workers/link_crawl_worker.rb b/app/workers/link_crawl_worker.rb
+index c63af1e43..8d6cd9ee7 100644
+--- a/app/workers/link_crawl_worker.rb
++++ b/app/workers/link_crawl_worker.rb
+@@ -3,7 +3,7 @@
+ class LinkCrawlWorker
+   include Sidekiq::Worker
+ 
+-  sidekiq_options queue: 'pull', retry: 0
++  sidekiq_options queue: 'crawler', retry: 0
+ 
+   def perform(status_id)
+     FetchLinkCardService.new.call(Status.find(status_id))
+diff --git a/config/sidekiq.yml b/config/sidekiq.yml
+index f1ba5651d..e0c4cabcf 100644
+--- a/config/sidekiq.yml
++++ b/config/sidekiq.yml
+@@ -6,6 +6,7 @@
+   - [ingress, 4]
+   - [mailers, 2]
+   - [pull]
++  - [crawler]
+   - [scheduler]
+ :scheduler:
+   :listened_queues_only: true
