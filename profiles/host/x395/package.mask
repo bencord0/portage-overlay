@@ -4,3 +4,10 @@ dev-qt/qtwebengine
 
 # Use libreoffice-bin instead
 app-office/libreoffice
+
+# Use gentoo-kernel-bin instead
+sys-kernel/gentoo-kernel
+
+# Use openssl-compat for older usages
+<dev-libs/openssl-3
+<dev-libs/openssl-compat-1.1

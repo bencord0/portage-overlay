@@ -1,4 +1,5 @@
 app-admin/awscli-bin
+app-admin/session-manager-plugin
 app-admin/pass
 app-admin/pass-otp
 app-backup/borgbackup

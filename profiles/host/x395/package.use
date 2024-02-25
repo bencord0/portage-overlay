@@ -1,27 +1,40 @@
+app-misc/mime-types nginx
 app-admin/pass-otp qrcode
 app-editors/vim python
 dev-libs/libbpf static-libs
 dev-libs/libpcre2 pcre32
+dev-libs/openssl ktls
 dev-vcs/git tk
 kde-apps/cantor -analitza
 kde-apps/okular -postscript epub markdown mobi speech
-kde-apps/kde-apps-meta -utils
+kde-apps/kde-apps-meta -games -utils
 kde-apps/kdemultimedia-meta -cdrom
 kde-apps/kdeutils-meta -cups
 kde-apps/krdc -rdp
 kde-plasma/plasma-meta -crypt -desktop-portal -discover networkmanager qrcode
+media-gfx/darktable gphoto2
+media-gfx/imagemagick raw webp
+media-gfx/sane-backends SANE_BACKENDS: -* bh canon
 media-libs/freetype -harfbuzz
 media-libs/libsdl2 gles2 haptic
 media-libs/libsndfile minimal
+media-libs/mesa VIDEO_CARDS: -* radeonsi
 media-libs/qhull static-libs
 media-video/ffmpeg libass opus
+media-video/obs-studio browser lua v4l vlc websocket
+net-dns/avahi python
 net-libs/gnutls tools
 net-misc/curl adns
 net-wireless/bluez -cups
-sys-apps/systemd cgroup-hybrid curl gcrypt gnuefi importd lzma nat
+sys-apps/systemd boot cgroup-hybrid curl gcrypt gnuefi importd lzma nat
 sys-apps/dbus user-session
 sys-apps/util-linux python
 sys-apps/xdg-desktop-portal screencast
+sys-devel/clang -test
 sys-devel/gcc graphite
+sys-fs/zfs dist-kernel
+sys-fs/zfs-kmod dist-kernel
+sys-kernel/installkernel dracut systemd-boot
 sys-libs/ncurses -gpm
+www-servers/nginx ktls NGINX_MODULES_HTTP: auth_request javascript metrics stub_status
 x11-libs/gtk+ -cups
