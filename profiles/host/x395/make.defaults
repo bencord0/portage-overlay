@@ -1,3 +1,5 @@
 ACCEPT_LICENSE="${ACCEPT_LICENSE} all-rights-reserved google-chrome intel-ucode linux-fw-redistributable MPEG-4 NPSL"
 USE="${USE} pulseaudio vaapi vulkan wayland -webengine"
+SANE_BACKENDS="bh canon"
 VIDEO_CARDS="amdgpu radeonsi"
+NGINX_MODULES_HTTP="auth_request javascript metrics stub_status"

@@ -14,11 +14,9 @@ kde-apps/krdc -rdp
 kde-plasma/plasma-meta -crypt -desktop-portal -discover networkmanager qrcode
 media-gfx/darktable gphoto2
 media-gfx/imagemagick raw webp
-media-gfx/sane-backends SANE_BACKENDS: -* bh canon
 media-libs/freetype -harfbuzz
 media-libs/libsdl2 gles2 haptic
 media-libs/libsndfile minimal
-media-libs/mesa VIDEO_CARDS: -* radeonsi
 media-libs/qhull static-libs
 media-video/ffmpeg libass opus
 media-video/obs-studio browser lua v4l vlc websocket
@@ -36,5 +34,4 @@ sys-fs/zfs dist-kernel
 sys-fs/zfs-kmod dist-kernel
 sys-kernel/installkernel dracut systemd-boot
 sys-libs/ncurses -gpm
-www-servers/nginx ktls NGINX_MODULES_HTTP: auth_request javascript metrics stub_status
 x11-libs/gtk+ -cups
