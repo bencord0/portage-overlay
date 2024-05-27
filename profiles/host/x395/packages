@@ -3,10 +3,8 @@ app-admin/session-manager-plugin
 app-admin/pass
 app-admin/pass-otp
 app-backup/borgbackup
-app-misc/radeontop
 app-office/libreoffice-bin
 dev-db/postgresql
-dev-util/bcc
 kde-apps/kde-apps-meta
 kde-plasma/plasma-meta
 mail-client/thunderbird-bin
