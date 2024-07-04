@@ -20,7 +20,7 @@ zfs create -o "mountpoint=${root}" "${zpool}/machines/${machine}"
 
 # Set initial profile
 mkdir -pv "${root}/etc/portage"
-ln -sf /var/db/repos/bencord0/profiles/default/linux/amd64/nspawn "${root}/etc/portage/make.profile"
+ln -sf /var/db/repos/bencord0/profiles/default/linux/amd64/nspawn-23 "${root}/etc/portage/make.profile"
 
 cat << EOF > "${root}/etc/portage/repos.conf"
 [gentoo]
