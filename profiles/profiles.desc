@@ -10,6 +10,7 @@ arm             default/linux/arm/armv7a/nspawn dev
 amd64           host/aniseed                    stable
 amd64           host/artifactory                stable
 amd64           host/blog                       stable
+amd64           host/circleci-runner            stable
 amd64           host/codeserver                 stable
 amd64           host/db                         stable
 amd64           host/guestfs                    stable

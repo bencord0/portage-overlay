@@ -7,7 +7,7 @@ inherit systemd unpacker
 
 DESCRIPTION="CircleCI Self-Hosted Runner"
 HOMEPAGE="https://circleci.com/docs/runner-overview/"
-SRC_URI="https://packagecloud.io/circleci/runner/packages/any/any/circleci-runner_3.0.13_amd64.deb/download.deb ->  ${P}.amd64.deb"
+SRC_URI="https://packagecloud.io/circleci/runner/packages/any/any/circleci-runner_${PV}_amd64.deb/download.deb ->  ${P}.amd64.deb"
 S="${WORKDIR}"
 
 LICENSE="CircleCI"
