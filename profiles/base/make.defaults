@@ -3,5 +3,3 @@ FEATURES="${FEATURES} buildpkg binpkg-multi-instance getbinpkg"
 
 INSTALL_MASK="${INSTALL_MASK} /var/db/repos"
 PKG_INSTALL_MASK="${INSTALL_MASK} /var/db/repos"
-
-PORTAGE_BINHOST="https://portage.condi.me/${CHOST}/packages/"

@@ -1,3 +1,3 @@
 gentoo:default/linux/amd64/23.0/systemd
 bencord0:base
-bencord0:base/linux/amd64
+bencord0:base/linux/amd64/23.0
