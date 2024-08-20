@@ -1,3 +1,6 @@
 # Gold appears to be mostly unmaintained and deadlocks my
 # compiler (high RAM usage during powerpc.cc).
 sys-devel/binutils -default-gold -gold
+
+# libxcrypt implements libcrypt.so
+sys-libs/glibc -crypt
