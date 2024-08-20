@@ -6,6 +6,10 @@ COPY locale.gen /etc/locale.gen
 COPY repos.conf /etc/portage/repos.conf
 COPY make.conf /etc/portage/make.conf
 
+RUN cp -v \
+    /var/db/repos/bencord0/profiles/base/linux/amd64/23.0/binrepos.conf \
+    /etc/portage/binrepos.conf
+
 RUN ln -sf \
     /var/db/repos/bencord0/profiles/host/mastodon \
     /etc/portage/make.profile
