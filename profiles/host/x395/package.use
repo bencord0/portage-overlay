@@ -35,3 +35,4 @@ sys-fs/zfs-kmod dist-kernel
 sys-kernel/installkernel dracut systemd-boot
 sys-libs/ncurses -gpm
 x11-libs/gtk+ -cups
+x11-libs/wxGTK webkit
