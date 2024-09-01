@@ -17,6 +17,7 @@ media-gfx/imagemagick raw webp
 media-libs/freetype -harfbuzz
 media-libs/libsdl2 gles2 haptic
 media-libs/libsndfile minimal
+media-libs/mlt qt5 qt6
 media-libs/qhull static-libs
 media-video/ffmpeg libass opus
 media-video/obs-studio browser lua v4l vlc websocket
