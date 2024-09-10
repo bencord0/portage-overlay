@@ -23,6 +23,10 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-lang/go"
+RDEPEND="
+	acct-group/tofutf
+	acct-user/tofutf
+"
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
