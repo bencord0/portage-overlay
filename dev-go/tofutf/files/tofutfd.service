@@ -1,0 +1,13 @@
+[Unit]
+Description=An opensource alternative to Terraform Enterprise
+
+[Service]
+User=tofutf
+Group=tofutf
+WorkingDirectory=
+
+EnvironmentFile=/etc/tofutf/env
+ExecStart=/usr/bin/tofutfd
+
+[Install]
+WantedBy=multi-user.target
