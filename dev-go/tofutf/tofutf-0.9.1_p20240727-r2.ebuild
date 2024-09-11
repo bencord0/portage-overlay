@@ -30,6 +30,10 @@ RDEPEND="
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
+PATCHES=(
+	"${FILESDIR}/state-empty-404.patch"
+)
+
 src_compile() {
 	ego build ./cmd/tofutfd
 	ego build ./cmd/tofutf

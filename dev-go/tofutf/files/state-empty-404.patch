@@ -1,0 +1,26 @@
+diff --git a/internal/state/api.go b/internal/state/api.go
+index 2cbfe63f..051d9370 100644
+--- a/internal/state/api.go
++++ b/internal/state/api.go
+@@ -59,7 +59,7 @@ func (a *api) getCurrentVersion(w http.ResponseWriter, r *http.Request) {
+ 
+ 	sv, err := a.GetCurrent(r.Context(), workspaceID)
+ 	if err != nil {
+-		tfeapi.Error(w, err)
++		w.WriteHeader(http.StatusNotFound)
+ 		return
+ 	}
+ 
+diff --git a/internal/state/tfe.go b/internal/state/tfe.go
+index 022f3f36..20c0687b 100644
+--- a/internal/state/tfe.go
++++ b/internal/state/tfe.go
+@@ -162,7 +162,7 @@ func (a *tfe) getCurrentVersion(w http.ResponseWriter, r *http.Request) {
+ 
+ 	sv, err := a.state.GetCurrent(r.Context(), workspaceID)
+ 	if err != nil {
+-		tfeapi.Error(w, err)
++		w.WriteHeader(http.StatusNotFound)
+ 		return
+ 	}
+ 
