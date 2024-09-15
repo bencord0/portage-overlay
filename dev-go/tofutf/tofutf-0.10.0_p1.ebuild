@@ -8,7 +8,7 @@ inherit go-module systemd
 EGO_SRC=github.com/tofutf/tofutf
 EGO_PN=${EGO_SRC}
 #EGIT_COMMIT="v${PV}"
-EGIT_COMMIT="50fb617b9eae975e09af450aa348763c81b323f7"
+EGIT_COMMIT="685fe562e4247e9ec372cdad8c667801cb252976"
 
 DESCRIPTION="An open source alternative to Terraform Enterprise"
 HOMEPAGE="https://docs.tofutf.io/"
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-lang/go"
+DEPEND=">=dev-lang/go-1.23.1"
 RDEPEND="
 	acct-group/tofutf
 	acct-user/tofutf
