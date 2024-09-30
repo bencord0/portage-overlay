@@ -3,19 +3,22 @@
 
 EAPI=8
 
-USE_RUBY="ruby31 ruby32"
+USE_RUBY="ruby32"
 inherit ruby-ng systemd
 
 DESCRIPTION="Your self-hosted, globally interconnected microblogging community "
 HOMEPAGE="https://joinmastodon.org/"
-SRC_URI="https://github.com/mastodon/mastodon/archive/refs/tags/v${PV/_/}.tar.gz -> ${P}.tar.gz"
+SRC_URI="
+	https://github.com/mastodon/mastodon/archive/refs/tags/v${PV/_/}.tar.gz -> ${P}.tar.gz
+	https://dl.condi.me/distfiles/${P}-vendor-bundle.tar.xz
+	https://dl.condi.me/distfiles/${P}-home-cache-yarn.tar.xz
+"
 
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RESTRICT="network-sandbox"
 DEPEND="
 	dev-db/postgresql
 	dev-libs/icu
@@ -60,7 +63,9 @@ all_ruby_compile() {
 	bundle config set --local without 'development test' || die
 	bundle config set --local silence_root_warning true || die
 	bundle install || die "Unable to install gems"
-	yarn install || die "yarn install"
+
+	cp -av ../.cache $HOME/ || die "copy yarn cache failed"
+	yarn install --pure-lockfile --frozen-lockfile --offline || die "yarn install"
 	NODE_ENV=production RAILS_ENV=production OTP_SECRET=precompile SECRET_KEY_BASE=precompile \
 		bundle exec rake assets:precompile || die "Unable to precompile assets"
 }
