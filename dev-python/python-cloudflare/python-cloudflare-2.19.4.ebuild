@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND="
-	dev-python/beautifulsoup
+	dev-python/beautifulsoup4
 	dev-python/jsonlines
 "
 BDEPEND=""
