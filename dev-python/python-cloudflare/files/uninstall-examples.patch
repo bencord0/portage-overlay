@@ -2,12 +2,12 @@ diff --git a/setup.py b/setup.py
 index f0ee2cf..f84e265 100755
 --- a/setup.py
 +++ b/setup.py
-@@ -26,7 +26,7 @@ def main():
-         # maintainer_email='martin@cloudflare.com',
-         url='https://github.com/cloudflare/python-cloudflare',
+@@ -31,7 +31,7 @@ def main():
+         },
          license='MIT',
--        packages=['cli4', 'examples']+find_packages(),
-+        packages=['cli4', 'CloudFlare'],
-         #package_dir={'CloudFlare': 'lib'}
-         #package_dir={'CloudFlare/examples': 'examples'},
-         #package_data={'cloudflare-examples': ["examples/*"]},
+         options={"bdist_wheel": {"universal": True}},
+-        packages=['CloudFlare', 'CloudFlare/tests', 'cli4', 'examples'],
++        packages=['CloudFlare', 'cli4'],
+         test_suite="CloudFlare.tests",
+         include_package_data=True,
+         data_files=[('share/man/man1', ['cli4/cli4.1'])],
