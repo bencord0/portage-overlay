@@ -1,5 +1,5 @@
 app-admin/awscli-bin
-<dev-lang/ruby:3.4
+<dev-lang/ruby-3.4
 <dev-libs/openssl-3.2
 <dev-ruby/bundler-2.6
 www-apps/mastodon
