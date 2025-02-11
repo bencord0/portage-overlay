@@ -1,11 +1,11 @@
 diff --git a/app/models/status.rb b/app/models/status.rb
-index 8bdb5e8db..879cf2f62 100644
+index e0630733d..8028a3bda 100644
 --- a/app/models/status.rb
 +++ b/app/models/status.rb
-@@ -88,7 +88,7 @@ class Status < ApplicationRecord
- 
+@@ -104,7 +104,7 @@ class Status < ApplicationRecord
+
    default_scope { recent.kept }
- 
+
 -  scope :recent, -> { reorder(id: :desc) }
 +  scope :recent, -> { reorder(created_at: :desc) }
    scope :remote, -> { where(local: false).where.not(uri: nil) }
@@ -13,10 +13,12 @@ index 8bdb5e8db..879cf2f62 100644
    scope :with_accounts, ->(ids) { where(id: ids).includes(:account) }
 diff --git a/db/migrate/20221219020202_add_created_at_index_to_statuses.rb b/db/migrate/20221219020202_add_created_at_index_to_statuses.rb
 new file mode 100644
-index 000000000..72ae9f949
+index 000000000..eb583baab
 --- /dev/null
 +++ b/db/migrate/20221219020202_add_created_at_index_to_statuses.rb
-@@ -0,0 +1,11 @@
+@@ -0,0 +1,13 @@
++# frozen_string_literal: true
++
 +class AddCreatedAtIndexToStatuses < ActiveRecord::Migration[5.2]
 +  disable_ddl_transaction!
 +

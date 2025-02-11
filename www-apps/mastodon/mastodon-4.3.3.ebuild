@@ -3,15 +3,19 @@
 
 EAPI=8
 
-USE_RUBY="ruby32"
+USE_RUBY="ruby33"
 inherit ruby-ng systemd
 
 DESCRIPTION="Your self-hosted, globally interconnected microblogging community "
 HOMEPAGE="https://joinmastodon.org/"
+
+MY_PV="${PV/_rc/-rc.}"
+MY_P="${PN}-${MY_PV/-*/}"
 SRC_URI="
-	https://github.com/mastodon/mastodon/archive/refs/tags/v${PV/_/}.tar.gz -> ${P}.tar.gz
-	https://dl.condi.me/distfiles/${P}-vendor-bundle.tar.xz
-	https://dl.condi.me/distfiles/${P}-home-cache-yarn.tar.xz
+	https://github.com/mastodon/mastodon/archive/refs/tags/v${MY_PV}.tar.gz -> ${P}.tar.gz
+	https://dl.condi.me/distfiles/${MY_P}-corepack.tar.xz
+	https://dl.condi.me/distfiles/${MY_P}-yarn-cache.tar.xz
+	https://dl.condi.me/distfiles/${MY_P}-vendor-bundle.tar.xz
 "
 
 LICENSE="AGPL-3"
@@ -23,7 +27,7 @@ DEPEND="
 	dev-db/postgresql
 	dev-libs/icu
 	net-dns/libidn
-	sys-apps/yarn
+	net-libs/nodejs[corepack]
 "
 RDEPEND="
 	acct-user/mastodon
@@ -39,9 +43,7 @@ RDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/0001-order-status-by-created-at.patch"
-	"${FILESDIR}/0002b-toot-character-limit-1000.patch"
-	"${FILESDIR}/0003a-publish-is-toot.patch"
+	"${FILESDIR}/0001b-order-status-by-created-at.patch"
 	"${FILESDIR}/0004-sidekiq-threadresolver.patch"
 	"${FILESDIR}/0005-sidekiq-crawler.patch"
 )
@@ -53,19 +55,37 @@ ruby_add_rdepend "
 	dev-ruby/bundler
 "
 
-RUBY_S="${PN}-${PV/_/}"
+RUBY_S="${PN}-${PV/_*/}"
+
+all_ruby_unpack() {
+	unpack ${A}
+
+	if [ -d "${PN}-${MY_PV}" ]; then
+		mv  --no-clobber -v "${PN}-${MY_PV}"/* "${PN}-${PV/_*//}/"
+	fi
+}
 
 all_ruby_compile() {
 	# https://bundler.io/man/bundle-config.1.html#CONFIGURE-BUNDLER-DIRECTORIES
 	export BUNDLE_USER_CACHE="${PWD}/.bundle/cache"
 
+	# bundle install && \
+	# tar cvJf ${P}-vendor-bundle.tar.xz ${P}/vendor/bundle
 	bundle config set --local deployment 'true' || die
 	bundle config set --local without 'development test' || die
 	bundle config set --local silence_root_warning true || die
 	bundle install || die "Unable to install gems"
 
-	cp -av ../.cache $HOME/ || die "copy yarn cache failed"
-	yarn install --pure-lockfile --frozen-lockfile --offline || die "yarn install"
+	# corepack pack && \
+	# tar cvJf ${P}-corepack.tar.xz ${P}/corepack.tgz
+	corepack enable || die "corepack enable"
+	corepack install -g --cache-only ./corepack.tgz || die "corepack install"
+
+	# tar cvJf ${P}-yarn-cache.tar.xz ${P}/.yarn
+	yarn config set --home enableTelemetry 0
+	yarn config set enableGlobalCache 0
+	yarn config set enableNetwork 0
+	yarn install --immutable --immutable-cache || die "yarn install"
 	NODE_ENV=production RAILS_ENV=production OTP_SECRET=precompile SECRET_KEY_BASE=precompile \
 		bundle exec rake assets:precompile || die "Unable to precompile assets"
 }
