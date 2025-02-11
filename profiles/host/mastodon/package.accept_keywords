@@ -6,3 +6,5 @@ app-admin/awscli-bin
 <dev-ruby/irb-1.15
 <dev-ruby/rubygems-3.6
 www-apps/mastodon
+virtual/rubygems
+virtual/ruby-ssl
