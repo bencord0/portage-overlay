@@ -1,6 +1,6 @@
-FROM gentoo/portage as gentoo
-FROM ghcr.io/bencord0/portage-overlay:master as bencord0
-FROM gentoo/stage3:amd64-systemd as stage3
+FROM gentoo/portage AS gentoo
+FROM ghcr.io/bencord0/portage-overlay:master AS bencord0
+FROM gentoo/stage3:amd64-systemd AS stage3
 
 COPY locale.gen /etc/locale.gen
 COPY repos.conf /etc/portage/repos.conf
