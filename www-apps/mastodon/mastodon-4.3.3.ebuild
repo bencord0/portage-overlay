@@ -68,6 +68,8 @@ all_ruby_unpack() {
 all_ruby_compile() {
 	# https://bundler.io/man/bundle-config.1.html#CONFIGURE-BUNDLER-DIRECTORIES
 	export BUNDLE_USER_CACHE="${PWD}/.bundle/cache"
+	export COREPACK_ENABLE_NETWORK=0
+	export COREPACK_DEFAULT_TO_LATEST=0
 
 	# bundle install && \
 	# tar cvJf ${P}-vendor-bundle.tar.xz ${P}/vendor/bundle
