@@ -89,6 +89,9 @@ all_ruby_compile() {
 	yarn config set enableNetwork 0
 	yarn install --immutable --immutable-cache || die "yarn install"
 	NODE_ENV=production RAILS_ENV=production OTP_SECRET=precompile SECRET_KEY_BASE=precompile \
+	ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=precompile \
+	ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=precompile \
+	ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY=precompile \
 		bundle exec rake assets:precompile || die "Unable to precompile assets"
 }
 
