@@ -32,12 +32,19 @@ location = /var/db/repos/bencord0
 EOF
 
 # In lieu of a stage3 tarball
+export FEATURES="buildpkg binpkg-multi-instance"
 EMERGE_ARGS=(
     # stop before merging packages
     #--ask
 
     # show emerge intentions
-    #--verbose
+    --verbose
+
+    # binary packages
+    --binpkg-respect-use=y
+    --binpkg-changed-deps=y
+    --buildpkg
+    --buildpkg-exclude "acct-group/* acct-user/* virtual/* sys-fs/zfs-kmod */*-bin"
 
     # parallelise merge
     --jobs
@@ -49,11 +56,11 @@ EMERGE_ARGS=(
     --root="${root}"
     --config-root="${root}"
 )
+
 emerge "${EMERGE_ARGS[@]}" sys-apps/baselayout
 emerge "${EMERGE_ARGS[@]}" sec-keys/openpgp-keys-gentoo-release
 ROOT="${root}" getuto
 
-# Ad-hoc stage1
 export USE="-* build systemd udev gawk pigz"
 export PYTHON_SINGLE_TARGET="python3_12"
 PACKAGES=(
@@ -66,7 +73,6 @@ for PACKAGE in "${PACKAGES[@]}"; do
 done
 unset USE PYTHON_SINGLE_TARGET
 
-# Ad-hoc system set
 PACKAGES=(
     app-arch/tar
     app-crypt/gnupg
@@ -80,17 +86,21 @@ for PACKAGE in "${PACKAGES[@]}"; do
     emerge "${EMERGE_ARGS[@]}" "${PACKAGE}"
 done
 
+
+EMERGE_ARGS+=(
+    --newuse
+    --update
+)
+emerge "${EMERGE_ARGS[@]}" @system
+
 # Set final profile
 rm -v "${root}/etc/portage/make.profile"
 ln -sf "/var/db/repos/bencord0/profiles/host/${profile}" "${root}/etc/portage/make.profile"
 zfs snap "${zpool}/machines/${machine}@gentoo-clean"
 
 EMERGE_ARGS+=(
-    --newuse
-    --update
     --sysroot="${root}"
 )
-
 emerge "${EMERGE_ARGS[@]}" @world @profile
 zfs snap "${zpool}/machines/${machine}@world-clean"
 
