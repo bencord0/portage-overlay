@@ -13,6 +13,7 @@ amd64           host/blog                       stable
 amd64           host/circleci-runner            stable
 amd64           host/codeserver                 stable
 amd64           host/db                         stable
+amd64           host/github-runner              stable
 amd64           host/guestfs                    stable
 amd64           host/juniper                    stable
 amd64           host/kubernetes                 stable
