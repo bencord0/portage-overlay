@@ -1,0 +1,4 @@
+app-portage/elt-patches
+dev-build/autoconf
+sys-apps/fakeroot
+virtual/dotnet-sdk
