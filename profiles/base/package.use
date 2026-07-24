@@ -4,3 +4,10 @@ sys-devel/binutils -default-gold -gold
 
 # libxcrypt implements libcrypt.so
 sys-libs/glibc -crypt
+
+# Use a slower parser, if it means we can skip a whole toolchain
+# This (optionally) depends on dev-python/mypy
+#             which depends on dev-python/ast-serialize (python package, implemented in rust
+#             which depends on dev-util/maturin (rust/python packaging bindings)
+#             which inherits cargo
+dev-python/charset-normalizer -native-extensions
