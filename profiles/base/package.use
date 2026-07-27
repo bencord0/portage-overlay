@@ -11,3 +11,6 @@ sys-libs/glibc -crypt
 #             which depends on dev-util/maturin (rust/python packaging bindings)
 #             which inherits cargo
 dev-python/charset-normalizer -native-extensions
+
+# Select our App Alternatives
+app-alternatives/tar gnu
