@@ -20,7 +20,6 @@ zfs create -o "mountpoint=${root}" "${zpool}/machines/${machine}"
 
 # Set initial profile
 mkdir -pv "${root}/etc/portage"
-cp -v  /var/db/repos/bencord0/profiles/base/linux/amd64/23.0/binrepos.conf "${root}/etc/portage/binrepos.conf"
 ln -sf /var/db/repos/bencord0/profiles/default/linux/amd64/nspawn-23 "${root}/etc/portage/make.profile"
 
 cat << EOF > "${root}/etc/portage/repos.conf"
@@ -57,12 +56,20 @@ EMERGE_ARGS=(
     --config-root="${root}"
 )
 
+# Setup the basic filesystem layout
+# This gets things like the single-usr layout right,
+# and symlinks bin,lib,lib64 correctly.
 emerge "${EMERGE_ARGS[@]}" sys-apps/baselayout
+
+# Setup gpg keys for the package manager to trust upstream gentoo
 emerge "${EMERGE_ARGS[@]}" sec-keys/openpgp-keys-gentoo-release
 ROOT="${root}" getuto
 
+# Setup enough of the filesystem to get a working chroot
+# USE flags are restricted down to minimise the time spent in this step
+PST="$(portageq envvar PYTHON_SINGLE_TARGET)"
 export USE="-* build systemd udev gawk pigz"
-export PYTHON_SINGLE_TARGET="python3_12"
+export PYTHON_SINGLE_TARGET="${PST}"
 PACKAGES=(
     sys-libs/glibc
     app-shells/bash
@@ -73,6 +80,8 @@ for PACKAGE in "${PACKAGES[@]}"; do
 done
 unset USE PYTHON_SINGLE_TARGET
 
+# Setup enough of the filesystem to get the package manager working
+# USE flags have been reset, derived from the profile.
 PACKAGES=(
     app-arch/tar
     app-crypt/gnupg
@@ -86,7 +95,9 @@ for PACKAGE in "${PACKAGES[@]}"; do
     emerge "${EMERGE_ARGS[@]}" "${PACKAGE}"
 done
 
-
+# We now have enough in the rootfs to build the rest of the system.
+# Some packages will need to be recompiled with new USE flags suitable
+# for the final system.
 EMERGE_ARGS+=(
     --newuse
     --update
@@ -98,12 +109,16 @@ rm -v "${root}/etc/portage/make.profile"
 ln -sf "/var/db/repos/bencord0/profiles/host/${profile}" "${root}/etc/portage/make.profile"
 zfs snap "${zpool}/machines/${machine}@gentoo-clean"
 
+# Install packages specific for the final profile
 EMERGE_ARGS+=(
     --sysroot="${root}"
 )
 emerge "${EMERGE_ARGS[@]}" @world @profile
+
+# Filesystem is complete and ready for use.
 zfs snap "${zpool}/machines/${machine}@world-clean"
 
+# Setup control files to launch the container
 if [[ ! -d /etc/systemd/nspawn ]]; then
     mkdir -pv /etc/systemd/nspawn
 fi

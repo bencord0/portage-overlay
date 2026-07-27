@@ -8,3 +8,4 @@ MACHINE="${1}"
 systemctl stop "systemd-nspawn@${MACHINE}.service"
 fuser -mk "/var/lib/machines/${MACHINE}" || true
 zfs umount "${ZPOOL}/machines/${MACHINE}"
+zfs destroy -r "${ZPOOL}/machines/${MACHINE}"
