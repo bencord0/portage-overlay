@@ -59,6 +59,7 @@ EMERGE_ARGS=(
 # Setup the basic filesystem layout
 # This gets things like the single-usr layout right,
 # and symlinks bin,lib,lib64 correctly.
+export USE="-* build systemd udev gawk pigz"
 emerge "${EMERGE_ARGS[@]}" sys-apps/baselayout
 
 # Setup gpg keys for the package manager to trust upstream gentoo
@@ -68,7 +69,6 @@ ROOT="${root}" getuto
 # Setup enough of the filesystem to get a working chroot
 # USE flags are restricted down to minimise the time spent in this step
 PST="$(portageq envvar PYTHON_SINGLE_TARGET)"
-export USE="-* build systemd udev gawk pigz"
 export PYTHON_SINGLE_TARGET="${PST}"
 PACKAGES=(
     sys-libs/glibc
@@ -83,7 +83,7 @@ unset USE PYTHON_SINGLE_TARGET
 # Setup enough of the filesystem to get the package manager working
 # USE flags have been reset, derived from the profile.
 PACKAGES=(
-    app-arch/tar
+    app-alternatives/tar
     app-crypt/gnupg
     app-editors/vim
     sys-apps/findutils
