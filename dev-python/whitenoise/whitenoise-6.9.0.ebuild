@@ -5,11 +5,10 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_14 )
 DISTUTILS_USE_PEP517=setuptools
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Radically simplified static file serving for Python web apps"
 HOMEPAGE="https://whitenoise.readthedocs.io"
-SRC_URI="https://files.pythonhosted.org/packages/source/w/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
