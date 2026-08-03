@@ -2,7 +2,7 @@
 *app-crypt/certbot
 *dev-db/postgresql
 *net-analyzer/fail2ban
-*net-dns/bind-tools
+*net-dns/bind
 *net-misc/curl
 *net-misc/dhcp
 *net-misc/openssh
