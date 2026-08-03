@@ -5,11 +5,10 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_14 )
 DISTUTILS_USE_PEP517=setuptools
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="An implementation of the psycopg2 module using cffi"
 HOMEPAGE="https://github.com/chtd/psycopg2cffi"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3+"
 SLOT="0"
