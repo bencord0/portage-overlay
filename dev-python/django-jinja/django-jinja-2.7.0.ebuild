@@ -5,11 +5,11 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_14 )
 DISTUTILS_USE_PEP517=setuptools
-inherit distutils-r1
+PYPI_NO_NORMALIZE=1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Simple and nonobstructive jinja2 integration with Django"
 HOMEPAGE="https://github.com/niwinz/django-jinja"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
