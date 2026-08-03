@@ -5,11 +5,10 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_14 )
 DISTUTILS_USE_PEP517=setuptools
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="GraphQL framework for Python"
 HOMEPAGE="https://graphene-python.org https://github.com/graphql-python/graphene"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -19,9 +18,4 @@ DISTUTILS_USE_SETUPTOOLS=bdepend
 RDEPEND="
 	<dev-python/graphql-core-3[${PYTHON_USEDEP}]
 	<dev-python/graphql-relay-3[${PYTHON_USEDEP}]
-	dev-python/aniso8601[${PYTHON_USEDEP}]
 "
-
-PATCHES=(
-	"${FILESDIR}/uncapped-aniso8601.patch"
-)
