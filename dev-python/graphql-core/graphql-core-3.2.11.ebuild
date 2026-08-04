@@ -5,7 +5,6 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_14 )
 DISTUTILS_USE_PEP517=poetry
-PYPI_NO_NORMALIZE=1
 
 inherit distutils-r1 pypi
 
@@ -15,10 +14,6 @@ HOMEPAGE="https://pypi.org/project/graphql-core/ https://github.com/graphql-pyth
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-
-PATCHES=(
-	"${FILESDIR}/graphql-core-pyproject.patch"
-)
 
 RDEPEND="
 	dev-python/rx[${PYTHON_USEDEP}]

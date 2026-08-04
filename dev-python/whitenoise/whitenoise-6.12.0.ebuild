@@ -13,7 +13,3 @@ HOMEPAGE="https://whitenoise.readthedocs.io"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
-DEPEND=""
-RDEPEND=""
-BDEPEND=""
