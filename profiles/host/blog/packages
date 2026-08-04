@@ -6,7 +6,6 @@
 *net-misc/curl
 *net-misc/dhcp
 *net-misc/openssh
-*net-vpn/tailscale
 *sys-block/open-iscsi
 *sys-boot/grub
 *sys-fs/dosfstools
