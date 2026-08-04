@@ -6,12 +6,11 @@ EAPI=8
 PYTHON_COMPAT=( python3_14 )
 DISTUTILS_USE_PEP517=setuptools
 PYPI_NO_NORMALIZE=1
-inherit distutils-r1
+PYPI_PN="Rx"
+inherit distutils-r1 pypi
 
 DESCRIPTION="The Reactive Extensions for Python"
 HOMEPAGE="http://reactivex.io/ https://github.com/ReactiveX/RxPY/tree/release/v1.6.x"
-SRC_URI="mirror://pypi/R/Rx/Rx-${PV}.tar.gz"
-S="${WORKDIR}/Rx-${PV}"
 
 LICENSE="MIT"
 SLOT="1"
