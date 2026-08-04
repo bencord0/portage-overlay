@@ -16,6 +16,6 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 DISTUTILS_USE_SETUPTOOLS=bdepend
 RDEPEND="
-	<dev-python/graphql-core-3[${PYTHON_USEDEP}]
-	<dev-python/graphql-relay-3[${PYTHON_USEDEP}]
+	<dev-python/graphql-core-3.3[${PYTHON_USEDEP}]
+	<dev-python/graphql-relay-3.3[${PYTHON_USEDEP}]
 "
