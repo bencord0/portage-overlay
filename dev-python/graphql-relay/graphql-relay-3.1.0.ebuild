@@ -3,13 +3,13 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{12,13} )
-DISTUTILS_USE_PEP517=setuptools
-inherit distutils-r1
+PYTHON_COMPAT=( python3_14 )
+DISTUTILS_USE_PEP517=poetry
+PYPI_NO_NORMALIZE=1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Relay library for GraphQL Python"
 HOMEPAGE="https://pypi.org/project/graphql-relay/ https://github.com/graphql-python/graphql-relay-py"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
