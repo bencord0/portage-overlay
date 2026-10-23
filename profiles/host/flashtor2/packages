@@ -1,0 +1,8 @@
+*app-emulation/firecracker-bin
+*app-emulation/qemu
+*app-emulation/virtiofsd
+*dev-db/postgresql
+*dev-debug/gdb
+*dev-util/rustup
+*net-dns/bind
+*www-servers/nginx
