@@ -1,6 +1,7 @@
-app-crypt/mit-krb5 openldap
+app-crypt/mit-krb5 -openldap
+app-misc/mime-types nginx
 dev-lang/python sqlite
-dev-libs/cyrus-sasl kerberos openldap urandom
+dev-libs/cyrus-sasl kerberos -openldap urandom
 net-dns/bind -berkdb urandom caps
 net-libs/gnutls tools
 net-nds/openldap kerberos -samba sasl
