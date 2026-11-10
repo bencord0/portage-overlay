@@ -1,6 +1,6 @@
-*app-editors/neovim
-*app-editors/code-server
+*www-apps/code-server-bin
 *dev-db/sqlite
 *dev-lang/go
 *dev-lang/python
+*dev-lang/rust-bin
 *dev-vcs/git

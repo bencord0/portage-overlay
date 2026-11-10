@@ -1,0 +1,4 @@
+app-crypt/gcr gtk
+media-libs/libglvnd X
+media-libs/freetype harfbuzz
+x11-libs/cairo X
